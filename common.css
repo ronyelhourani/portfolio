@@ -620,6 +620,14 @@ button:hover {
   color: #ffffff;
 }
 
+.status-pass {
+  color: green;
+}
+
+.status-fail {
+  color: red;
+}
+
 /* COMPONENT: project-bug-report */
 .project-bug-report {
   padding-top: 20px;
