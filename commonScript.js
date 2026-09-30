@@ -17,7 +17,26 @@ for (const accordionItem of accordionItemList) {
 
 // ----------------------------------------------------------------------------------------------------
 
-// (2) Purpose of the code below: when a link in the table of contents is clicked, the script prevents the default behavior, calculates the position of the target element, and smoothly scrolls the window to the position of the target element on the screen.
+// (2) "Work experience" dropdown: a click on the menu item opens/closes the two choices, a click anywhere else closes them
+const menuDropdown = document.querySelector(".menu-dropdown");
+if (menuDropdown) {
+  menuDropdown
+    .querySelector(".menu-dropdown-toggle")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+      menuDropdown.classList.toggle("open");
+    });
+
+  document.addEventListener("click", function (event) {
+    if (!menuDropdown.contains(event.target)) {
+      menuDropdown.classList.remove("open");
+    }
+  });
+}
+
+// ----------------------------------------------------------------------------------------------------
+
+// (3) Purpose of the code below: when a link in the table of contents is clicked, the script prevents the default behavior, calculates the position of the target element, and smoothly scrolls the window to the position of the target element on the screen.
 document.addEventListener("DOMContentLoaded", function () {
   // This selects all elements with the class table-of-contents-section-title, which are the links in the table of contents
   const links = document.querySelectorAll(".reach-section-title");

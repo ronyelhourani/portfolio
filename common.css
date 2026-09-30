@@ -347,6 +347,65 @@ button:hover {
   background-color: var(--navigation-link-background-hover-color);
 }
 
+/* WORK EXPERIENCE DROPDOWN (its links reuse the .menu a styles above) */
+.navigation-bar .menu-dropdown {
+  position: relative;
+}
+
+/* Small caret after "Work experience" */
+.navigation-bar .menu-dropdown-toggle::after {
+  content: "";
+  display: inline-block;
+  margin-left: 6px;
+  vertical-align: middle;
+  border-top: 5px solid var(--navigationlink-text-color);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+/* The box: rounded border + soft shadow */
+.navigation-bar .menu-dropdown-list {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  min-width: 160px;
+  padding: 6px 0;
+  background-color: var(--body-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Small arrow pointing to "Work experience" */
+.navigation-bar .menu-dropdown-list::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--body-bg-color);
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  transform: rotate(45deg);
+}
+
+/* Each choice: full-width row, hover highlights the whole row */
+.navigation-bar .menu-dropdown-list a {
+  padding: 8px 24px;
+}
+
+.navigation-bar .menu-dropdown-list a:hover {
+  background-color: var(--navigation-link-background-hover-color);
+}
+
+.navigation-bar .menu-dropdown.open .menu-dropdown-list {
+  display: flex;
+}
+
 /* GITHUB ICON */
 .navigation-bar .fa-github {
   font-size: var(--navigationBar-logo-font-size-value);
