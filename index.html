@@ -3,97 +3,179 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio Homepage</title>
+    <title>Rony El Hourani - QA Engineer</title>
     <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-P032M511N7"
     ></script>
     <script src="analytics.js"></script>
-    <script
-      src="https://kit.fontawesome.com/0d4f931e5e.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="theme-init.js"></script>
     <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="index.css" />
     <script src="commonScript.js" defer></script>
   </head>
 
   <body>
-    <header>
-      <!-- Top colored line  -->
-      <div class="topScreen-line-decoration"></div>
-      <!-- NAVIGATION BAR -->
-      <div class="navigation-bar-parent">
-        <div class="navigation-bar section-layout">
-          <!-- Menu -->
-          <div class="menu">
-            <a href="index.html"><span>Home</span></a>
-            <a href="#projects" class="reach-section-title"
-              ><span>Projects</span></a
-            >
-            <a href="aboutMe.html"><span>About</span></a>
-            <div class="menu-dropdown">
-              <a href="#" class="menu-dropdown-toggle"><span>Work experience</span></a>
-              <div class="menu-dropdown-list">
-                <a href="experience/ats.html"><span>ATS</span></a>
-                <a href="experience/advenis.html"><span>Advenis</span></a>
-              </div>
+    <header class="site-header">
+      <div class="site-header-inner section-layout">
+        <a class="brand" href="index.html">rony<span>@</span>qa</a>
+        <nav class="menu">
+          <div class="menu-dropdown">
+            <a href="#" class="menu-dropdown-toggle">Experience</a>
+            <div class="menu-dropdown-list">
+              <a href="experience/ats.html">ATS</a>
+              <a href="experience/advenis.html">Advenis</a>
             </div>
           </div>
-
-          <!-- Github repository link -->
-          <a href="https://github.com/ronyelhourani/portfolio" target="_blank" rel="noopener noreferrer"
-            ><i class="fa-brands fa-github fa-2x" title="My Git Repository">
-            </i>
-          </a>
-        </div>
+          <a href="#skills">Skills</a>
+          <a href="#projects" hidden>Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a
+            href="https://github.com/ronyelhourani/portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </nav>
+        <button type="button" class="theme-toggle">light mode</button>
       </div>
     </header>
 
     <main>
-      <!-- Homepage intro -->
-      <section class="homepage-intro section-layout section-properties">
-        <h2>Hi!</h2>
-        <h1>You can call me <span>Rony</span></h1>
-        <p>
-          Hello everyone, my name is Rony El Hourani. I am a passionate ISTQB®
-          certified QA engineer and Front-end integrator.
-        </p>
-        <a href="aboutMe.html"><button>Learn more about me</button></a>
-        <div class="text-and-icons-list">
-          <span class="text-and-icon"
-            ><i class="fa-brands fa-github"></i>
-            <a href="https://github.com/ronyelhourani/portfolio" target="_blank" rel="noopener noreferrer"
-              >My Github repository</a
-            ></span
-          >
-          <span class="text-and-icon">
-            <img
-              src="images/linkedin-logo.png"
-              alt="LinkedIn profile"
-              class="logo-image"
-            />
-            <a
-              href="https://www.linkedin.com/in/rony-el-hourani"
-              target="_blank" rel="noopener noreferrer"
-              >LinkedIn profile</a
-            >
-          </span>
+      <!-- HERO -->
+      <section class="hero section-layout section-properties">
+        <div class="hero-main">
+          <p class="eyebrow">// hello, I'm Rony El Hourani</p>
+          <h1>QA Engineer<span class="cursor">_</span></h1>
+          <p class="hero-pitch">
+            ISTQB&reg; certified QA engineer. I design test strategies and
+            write the automation that catches regressions before production.
+            [Replace with your own one-line pitch.]
+          </p>
+          <div class="hero-actions">
+            <a href="cv/Rony-El-Hourani-CV.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download CV</a>
+            <a href="#contact" class="btn btn-outline">Contact me</a>
+          </div>
         </div>
+        <aside class="hero-profile">
+          <img
+            src="images/profile-face.jpg"
+            alt="Rony El Hourani"
+            class="hero-profile-photo"
+            width="90"
+            height="90"
+          />
+          <p class="hero-profile-name">Rony El Hourani</p>
+          <p class="hero-profile-line">Career changer &middot; ISTQB&reg; CTFL</p>
+          <ul class="hero-profile-links">
+            <li><a href="https://github.com/ronyelhourani/portfolio" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/rony-el-hourani" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="mailto:ronyhourani@gmail.com">Email</a></li>
+          </ul>
+          <a href="#about" class="hero-profile-about">About me &darr;</a>
+        </aside>
       </section>
 
-      <section class="projects-list-section section-layout section-properties">
-        <!-- Intro -->
-        <div class="projects-list-section-intro">
-          <h2 id="projects">QA portfolio</h2>
-          <p>
-            This is my QA portfolio, where I showcase my journey in crafting
-            test plans, documenting bug reports, and working with test
-            automation tools, primarily Cypress.
-          </p>
-        </div>
-        <!-- Content -->
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section-layout section-properties">
+        <p class="eyebrow">// experience</p>
+        <h2>Work experience</h2>
+        <ul class="job-cards">
+          <li class="job-card">
+            <div class="job-card-header">
+              <h3>QA Engineer &middot; ATS</h3>
+              <span class="job-card-dates">[Start] &ndash; [End]</span>
+            </div>
+            <ul class="job-card-bullets">
+              <li>[Achievement with a number, e.g. cut regression time by X%.]</li>
+              <li>[Achievement.]</li>
+              <li>[Achievement.]</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">[Tool 1]</span>
+              <span class="tag">[Tool 2]</span>
+              <span class="tag">[Tool 3]</span>
+            </div>
+            <a href="experience/ats.html" class="job-card-link">Read more &rarr;</a>
+          </li>
+          <li class="job-card">
+            <div class="job-card-header">
+              <h3>QA Engineer &middot; Advenis</h3>
+              <span class="job-card-dates">[Start] &ndash; [End]</span>
+            </div>
+            <ul class="job-card-bullets">
+              <li>[Achievement with a number.]</li>
+              <li>[Achievement.]</li>
+              <li>[Achievement.]</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">[Tool 1]</span>
+              <span class="tag">[Tool 2]</span>
+              <span class="tag">[Tool 3]</span>
+            </div>
+            <a href="experience/advenis.html" class="job-card-link">Read more &rarr;</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section-layout section-properties">
+        <p class="eyebrow">// skills</p>
+        <h2>Skills</h2>
+        <dl class="skills-list">
+          <div class="skills-group">
+            <dt>Automation</dt>
+            <dd class="tags">
+              <span class="tag">Cypress</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">End-to-end testing</span>
+            </dd>
+          </div>
+          <div class="skills-group">
+            <dt>API testing</dt>
+            <dd class="tags">
+              <span class="tag">Postman</span>
+              <span class="tag">OpenAPI / Swagger</span>
+              <span class="tag">REST</span>
+            </dd>
+          </div>
+          <div class="skills-group">
+            <dt>Performance</dt>
+            <dd class="tags">
+              <span class="tag">JMeter</span>
+              <span class="tag">Chart.js reports</span>
+            </dd>
+          </div>
+          <div class="skills-group">
+            <dt>Process</dt>
+            <dd class="tags">
+              <span class="tag">ISTQB&reg; CTFL</span>
+              <span class="tag">Test plans</span>
+              <span class="tag">Manual testing</span>
+              <span class="tag">Bug reporting</span>
+            </dd>
+          </div>
+          <div class="skills-group">
+            <dt>Tools</dt>
+            <dd class="tags">
+              <span class="tag">Git</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">MongoDB</span>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- EARLIER PROJECTS -->
+      <section id="projects" class="section-layout section-properties" hidden>
+        <p class="eyebrow">// earlier projects</p>
+        <h2>Earlier projects</h2>
+        <p class="section-intro">
+          Before my first QA job, I built these projects to learn the craft:
+          test plans, bug reports and test automation, mainly with Cypress.
+        </p>
         <ul class="project-cards-list">
           <!-- End-to-end testing of Twitter-Clone -->
           <li class="project-card">
@@ -102,35 +184,17 @@
               class="project-card-link"
             >
               <div class="title-and-chip">
-                <h4>Twitter-Clone</h4>
-                <span class="project-card-chip chip-e2e">End-to-End</span>
+                <h3>Twitter-Clone</h3>
+                <span class="project-card-chip">End-to-End</span>
               </div>
               <p class="project-card-link-description">
                 End-to-end testing of Twitter-Clone
               </p>
-              <ul class="logos-list-card">
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/cypress-logo-card.png"
-                    alt="Cypress"
-                    title="Cypress"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/javascript-logo-card.png"
-                    alt="JavaScript"
-                    title="JavaScript"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/mongoDB-logo-card.png"
-                    alt="MongoDB"
-                    title="MongoDB"
-                  />
-                </li>
-              </ul>
+              <div class="tags">
+                <span class="tag">Cypress</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">MongoDB</span>
+              </div>
               <figure class="project-card-image">
                 <img
                   src="images/project-card-images/twitter-clone-e2e-card-link.png"
@@ -138,8 +202,8 @@
                   loading="lazy"
                 />
               </figure>
-              <p class="see-more"><span>See more &#8594;</span></p></a
-            >
+              <p class="see-more">See more &rarr;</p>
+            </a>
           </li>
           <!-- End-to-end testing of Billzer -->
           <li class="project-card">
@@ -148,28 +212,16 @@
               class="project-card-link"
             >
               <div class="title-and-chip">
-                <h4>Billzer</h4>
-                <span class="project-card-chip chip-e2e">End-to-End</span>
+                <h3>Billzer</h3>
+                <span class="project-card-chip">End-to-End</span>
               </div>
               <p class="project-card-link-description">
                 End-to-end testing of Billzer
               </p>
-              <ul class="logos-list-card">
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/cypress-logo-card.png"
-                    alt="Cypress"
-                    title="Cypress"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/javascript-logo-card.png"
-                    alt="JavaScript"
-                    title="JavaScript"
-                  />
-                </li>
-              </ul>
+              <div class="tags">
+                <span class="tag">Cypress</span>
+                <span class="tag">JavaScript</span>
+              </div>
               <figure class="project-card-image">
                 <img
                   src="images/project-card-images/billzer-card-link.png"
@@ -177,8 +229,8 @@
                   loading="lazy"
                 />
               </figure>
-              <p class="see-more"><span>See more &#8594;</span></p></a
-            >
+              <p class="see-more">See more &rarr;</p>
+            </a>
           </li>
           <!-- End-to-end testing of TodoListMe -->
           <li class="project-card">
@@ -187,28 +239,16 @@
               class="project-card-link"
             >
               <div class="title-and-chip">
-                <h4>TodoListMe</h4>
-                <span class="project-card-chip chip-e2e">End-to-End</span>
+                <h3>TodoListMe</h3>
+                <span class="project-card-chip">End-to-End</span>
               </div>
               <p class="project-card-link-description">
                 End-to-end testing of TodoListMe
               </p>
-              <ul class="logos-list-card">
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/cypress-logo-card.png"
-                    alt="Cypress"
-                    title="Cypress"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/javascript-logo-card.png"
-                    alt="JavaScript"
-                    title="JavaScript"
-                  />
-                </li>
-              </ul>
+              <div class="tags">
+                <span class="tag">Cypress</span>
+                <span class="tag">JavaScript</span>
+              </div>
               <figure class="project-card-image">
                 <img
                   src="images/project-card-images/todolistme-card-link.png"
@@ -216,8 +256,8 @@
                   loading="lazy"
                 />
               </figure>
-              <p class="see-more"><span>See more &#8594;</span></p></a
-            >
+              <p class="see-more">See more &rarr;</p>
+            </a>
           </li>
           <!-- API testing of Twitter-Clone -->
           <li class="project-card">
@@ -226,49 +266,19 @@
               class="project-card-link"
             >
               <div class="title-and-chip">
-                <h4>Twitter-Clone</h4>
-                <span class="project-card-chip chip-API">API</span>
+                <h3>Twitter-Clone</h3>
+                <span class="project-card-chip">API</span>
               </div>
               <p class="project-card-link-description">
                 API testing of Twitter-Clone
               </p>
-              <ul class="logos-list-card">
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/cypress-logo-card.png"
-                    alt="Cypress"
-                    title="Cypress"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/javascript-logo-card.png"
-                    alt="JavaScript"
-                    title="JavaScript"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/postman-logo-card.png"
-                    alt="Postman"
-                    title="Postman"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/swagger-logo-card.png"
-                    alt="OpenAPI / Swagger"
-                    title="OpenAPI / Swagger"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/mongoDB-logo-card.png"
-                    alt="MongoDB"
-                    title="MongoDB"
-                  />
-                </li>
-              </ul>
+              <div class="tags">
+                <span class="tag">Cypress</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Postman</span>
+                <span class="tag">OpenAPI / Swagger</span>
+                <span class="tag">MongoDB</span>
+              </div>
               <figure class="project-card-image">
                 <img
                   src="images/project-card-images/twitter-clone-API-card-link.png"
@@ -276,8 +286,8 @@
                   loading="lazy"
                 />
               </figure>
-              <p class="see-more"><span>See more &#8594;</span></p></a
-            >
+              <p class="see-more">See more &rarr;</p>
+            </a>
           </li>
           <!-- API testing of REST Countries -->
           <li class="project-card">
@@ -286,42 +296,18 @@
               class="project-card-link"
             >
               <div class="title-and-chip">
-                <h4>REST Countries</h4>
-                <span class="project-card-chip chip-API">API</span>
+                <h3>REST Countries</h3>
+                <span class="project-card-chip">API</span>
               </div>
               <p class="project-card-link-description">
                 API testing of REST Countries
               </p>
-              <ul class="logos-list-card">
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/cypress-logo-card.png"
-                    alt="Cypress"
-                    title="Cypress"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/javascript-logo-card.png"
-                    alt="JavaScript"
-                    title="JavaScript"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/postman-logo-card.png"
-                    alt="Postman"
-                    title="Postman"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/swagger-logo-card.png"
-                    alt="OpenAPI / Swagger"
-                    title="OpenAPI / Swagger"
-                  />
-                </li>
-              </ul>
+              <div class="tags">
+                <span class="tag">Cypress</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Postman</span>
+                <span class="tag">OpenAPI / Swagger</span>
+              </div>
               <figure class="project-card-image">
                 <img
                   src="images/project-card-images/restcountries-card-link.png"
@@ -329,8 +315,8 @@
                   loading="lazy"
                 />
               </figure>
-              <p class="see-more"><span>See more &#8594;</span></p></a
-            >
+              <p class="see-more">See more &rarr;</p>
+            </a>
           </li>
           <!-- Twitter-Clone-Performance-testing -->
           <li class="project-card">
@@ -339,109 +325,92 @@
               class="project-card-link"
             >
               <div class="title-and-chip">
-                <h4>Twitter-Clone</h4>
-                <span class="project-card-chip chip-performance"
-                  >Performance</span
-                >
+                <h3>Twitter-Clone</h3>
+                <span class="project-card-chip">Performance</span>
               </div>
               <p class="project-card-link-description">
                 Performance testing of Twitter-Clone
               </p>
-              <ul class="logos-list-card">
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/jmeter-logo-card.png"
-                    alt="JMeter"
-                    title="JMeter"
-                  />
-                </li>
-              </ul>
+              <div class="tags">
+                <span class="tag">JMeter</span>
+              </div>
               <figure class="project-card-image">
                 <img
                   src="images/project-card-images/twitter-clone-performance-card-link.png"
-                  alt="Twitter-Clone-API-testing"
+                  alt="Twitter-Clone-performance-testing"
                   loading="lazy"
                 />
               </figure>
-              <p class="see-more"><span>See more &#8594;</span></p></a
-            >
+              <p class="see-more">See more &rarr;</p>
+            </a>
           </li>
         </ul>
       </section>
 
-      <section class="projects-list-section section-layout section-properties">
-        <!-- Intro -->
-        <div class="projects-list-section-intro">
-          <h2>Web design portfolio</h2>
-          <p>
-            Here is my web design portfolio. It highlights my journey in
-            designing websites and web applications that prioritize both visual
-            appeal and user experience, crafting mockups and implementating them
-            using recent CSS features.
-          </p>
+      <!-- ABOUT -->
+      <section id="about" class="section-layout section-properties">
+        <p class="eyebrow">// about</p>
+        <h2>About me</h2>
+        <div class="about-content">
+          <img
+            src="images/Profile-picture2.jpg"
+            alt="Profile picture of Rony El Hourani"
+            class="about-picture"
+            loading="lazy"
+          />
+          <div class="about-text">
+            <p>
+              I changed my career path to pursue a role I'm truly passionate
+              about. Through hard work and dedication, I became a QA engineer
+              and obtained the ISTQB&reg; Certified Tester Foundation Level
+              (CTFL) certification.
+            </p>
+            <p>
+              I believe in continuous learning, and I'm always on the lookout
+              for new challenges that help me grow both professionally and
+              personally. I am consistently dedicated to quality and accuracy
+              in every project I undertake.
+            </p>
+          </div>
         </div>
-        <!-- Content -->
-        <ul class="project-cards-list">
-          <!-- Wine shop web app -->
-          <li class="project-card">
-            <a
-              href="projects/web_design/ecommerce_wine/ecommerce_wine.html"
-              target="_blank" rel="noopener noreferrer"
-              class="project-card-link"
-              ><h4>Wine shop web app</h4>
-              <p class="project-card-link-description">Wine shop web app</p>
-              <ul class="logos-list-card">
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/html-logo-card.png"
-                    alt="HTML"
-                    title="HTML"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/css-logo-card.png"
-                    alt="CSS"
-                    title="CSS"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/javascript-logo-card.png"
-                    alt="JavaScript"
-                    title="JavaScript"
-                  />
-                </li>
-                <li class="logo-card">
-                  <img
-                    src="images/project-card-logo-tools-used/figma-logo-card.png"
-                    alt="Figma"
-                    title="Figma"
-                  />
-                </li>
-              </ul>
-              <figure class="project-card-image">
-                <img
-                  src="images/project-card-images/Wine-E-commerce.png"
-                  alt="Wine E-commerce"
-                  loading="lazy"
-                />
-              </figure>
-              <p class="see-more"><span>See more &#8594;</span></p></a
-            >
-          </li>
-        </ul>
       </section>
 
-      <!-- CONTACT ME -->
-      <section class="contact section-layout section-properties">
+      <!-- CONTACT -->
+      <section id="contact" class="contact section-layout section-properties">
+        <p class="eyebrow">// contact</p>
         <h2>Contact</h2>
         <p>
-          Hello, if you want to talk to me about your project, I would love to
-          hear from you.<br />Feel free to send me an email:
-          <i class="fa-regular fa-envelope"></i>
-          ronyhourani@gmail.com
+          If you want to talk about QA, automation or a role on your team, I
+          would love to hear from you.
         </p>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">email</span>
+            <a href="mailto:ronyhourani@gmail.com">ronyhourani@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-label">linkedin</span>
+            <a
+              href="https://www.linkedin.com/in/rony-el-hourani"
+              target="_blank"
+              rel="noopener noreferrer"
+              >linkedin.com/in/rony-el-hourani</a
+            >
+          </li>
+          <li>
+            <span class="contact-label">github</span>
+            <a
+              href="https://github.com/ronyelhourani/portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              >github.com/ronyelhourani/portfolio</a
+            >
+          </li>
+          <li>
+            <span class="contact-label">cv</span>
+            <a href="cv/Rony-El-Hourani-CV.pdf" target="_blank" rel="noopener noreferrer">Download CV (PDF)</a>
+          </li>
+        </ul>
       </section>
     </main>
   </body>

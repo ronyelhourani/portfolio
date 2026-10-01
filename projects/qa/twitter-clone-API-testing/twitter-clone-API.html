@@ -10,6 +10,7 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-P032M511N7"
     ></script>
     <script src="../../../analytics.js"></script>
+    <script src="../../../theme-init.js"></script>
     <script
       src="https://kit.fontawesome.com/0d4f931e5e.js"
       crossorigin="anonymous"
@@ -18,31 +19,24 @@
     <link rel="stylesheet" href="../../../common.css" />
   </head>
   <body>
-    <header>
-      <!-- Top colored line  -->
-      <div class="topScreen-line-decoration"></div>
-      <!-- NAVIGATION BAR -->
-      <div class="navigation-bar-parent">
-        <div class="navigation-bar section-layout">
-          <!-- Menu -->
-          <div class="menu">
-            <a href="../../../index.html"><span>Home</span></a>
-            <a href="../../../aboutMe.html"><span>About</span></a>
-            <div class="menu-dropdown">
-              <a href="#" class="menu-dropdown-toggle"><span>Work experience</span></a>
-              <div class="menu-dropdown-list">
-                <a href="../../../experience/ats.html"><span>ATS</span></a>
-                <a href="../../../experience/advenis.html"><span>Advenis</span></a>
-              </div>
+    <header class="site-header">
+      <div class="site-header-inner section-layout">
+        <a class="brand" href="../../../index.html">rony<span>@</span>qa</a>
+        <nav class="menu">
+          <div class="menu-dropdown">
+            <a href="#" class="menu-dropdown-toggle">Experience</a>
+            <div class="menu-dropdown-list">
+              <a href="../../../experience/ats.html">ATS</a>
+              <a href="../../../experience/advenis.html">Advenis</a>
             </div>
           </div>
-
-          <!-- Github repository link -->
-          <a href="https://github.com/ronyelhourani/portfolio" target="_blank" rel="noopener noreferrer"
-            ><i class="fa-brands fa-github fa-2x" title="My Git Repository">
-            </i>
-          </a>
-        </div>
+          <a href="../../../index.html#skills">Skills</a>
+          <a href="../../../index.html#projects" hidden>Projects</a>
+          <a href="../../../index.html#about">About</a>
+          <a href="../../../index.html#contact">Contact</a>
+          <a href="https://github.com/ronyelhourani/portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+        <button type="button" class="theme-toggle">light mode</button>
       </div>
     </header>
 

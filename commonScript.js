@@ -17,7 +17,7 @@ for (const accordionItem of accordionItemList) {
 
 // ----------------------------------------------------------------------------------------------------
 
-// (2) "Work experience" dropdown: a click on the menu item opens/closes the two choices, a click anywhere else closes them
+// (2) "Experience" dropdown: a click on the menu item opens/closes the two choices, a click anywhere else closes them
 const menuDropdown = document.querySelector(".menu-dropdown");
 if (menuDropdown) {
   menuDropdown
@@ -36,36 +36,25 @@ if (menuDropdown) {
 
 // ----------------------------------------------------------------------------------------------------
 
-// (3) Purpose of the code below: when a link in the table of contents is clicked, the script prevents the default behavior, calculates the position of the target element, and smoothly scrolls the window to the position of the target element on the screen.
-document.addEventListener("DOMContentLoaded", function () {
-  // This selects all elements with the class table-of-contents-section-title, which are the links in the table of contents
-  const links = document.querySelectorAll(".reach-section-title");
+// (3) Theme toggle: dark is the default. The choice is saved in localStorage and applied before the page paints by theme-init.js
+const themeToggle = document.querySelector(".theme-toggle");
+if (themeToggle) {
+  const root = document.documentElement;
 
-  // Iterates through each link
-  links.forEach((link) => {
-    // Adds a click event listener to each link
-    link.addEventListener("click", function (event) {
-      // Prevents the default behavior of the link, which is to navigate to a new page or anchor
-      event.preventDefault();
-      // Gets the target element's ID by extracting it from the href attribute of the clicked link
-      // The substring(1) is used to remove the '#' character.
-      const targetId = this.getAttribute("href").substring(1);
-      // Gets the target element using its ID
-      const targetElement = document.getElementById(targetId);
+  function updateThemeToggleLabel() {
+    themeToggle.textContent =
+      root.dataset.theme === "light" ? "dark mode" : "light mode";
+  }
 
-      // Checks if the target element exists
-      if (targetElement) {
-        // Calculates the offset from the top of the document to the target element
-        const offsetTop = targetElement.offsetTop;
-        // Adjusted for a 115px offset from the top
-        const scrollPosition = offsetTop - 110;
+  updateThemeToggleLabel();
 
-        // Scrolls the window to the calculated position with a smooth scrolling behavior
-        window.scrollTo({
-          top: scrollPosition,
-          behavior: "smooth",
-        });
-      }
-    });
+  themeToggle.addEventListener("click", function () {
+    root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
+    try {
+      localStorage.setItem("theme", root.dataset.theme);
+    } catch (error) {
+      // Storage can be blocked (private window). The theme still changes for this visit.
+    }
+    updateThemeToggleLabel();
   });
-});
+}

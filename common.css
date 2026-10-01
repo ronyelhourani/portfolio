@@ -1,127 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap");
 
+/* Design: dark and technical. Dark is the default, light is a toggle (data-theme="light" on <html>). */
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface-2: #21262d;
+  --border: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #3fb950;
+  --accent-fg: #0d1117;
+  --link: #58a6ff;
+  --pass: #3fb950;
+  --fail: #f85149;
+  --terminal-bg: #010409;
+  --terminal-text: #e6edf3;
+
+  --font-body: Inter, system-ui, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+
+  --text-size: 16px;
+  --radius: 8px;
+  --header-height: 64px;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --surface: #f6f8fa;
+  --surface-2: #eaeef2;
+  --border: #d0d7de;
+  --text: #1f2328;
+  --muted: #59636e;
+  --accent: #1a7f37;
+  --accent-fg: #ffffff;
+  --link: #0969da;
+  --pass: #1a7f37;
+  --fail: #cf222e;
+  --terminal-bg: #0d1117;
+  --terminal-text: #e6edf3;
+  color-scheme: light;
+}
+
+/* Lets the hidden attribute win over display rules such as .section-properties */
+[hidden] {
+  display: none !important;
+}
+
+/*      --------------------        ELEMENTS        -----------------------------       */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Inter, sans-serif;
-  font-size: var(--text-font-size-value);
-  color: var(--primary-text-color);
-  line-height: var(--p--lineHeight);
 }
 
-:root {
-  --body-bg-color: #fff;
-  --button-bg-color: #fff;
-  --border-color: #e5e7eb;
-  --button-border-color: #d1d5db;
-  --primary-text-color: #374151;
-  --navigationlink-text-color: #000;
-  --navigation-link-background-hover-color: #ccfae7;
-  --button-text-color: #1f2937;
-  --headline-text-color: #000;
-  --text-and-icons-color: #4b5563;
-  --text-and-icons-hover-color: linear-gradient(
-    to right top,
-    rgba(0, 232, 135),
-    rgba(0, 232, 135),
-    rgba(0, 224, 243)
-  );
-  --headline-background-color: linear-gradient(
-    to right top,
-    rgba(0, 232, 135, 0.4),
-    rgba(0, 232, 135, 0.4),
-    rgba(0, 224, 243, 0.4)
-  );
-  --chip-projectCard-e2e-background-color: #e6def3;
-  --chip-projectCard-API-background-color: #ffead1;
-  --chip-projectCard-performance-background-color: #c2ebc2;
-
-  --table-of-contents-link-color: #9ca3af;
-  --table-of-contents-link-hover-color: #111827;
-  --table-of-contents-link-focus-color: #111827;
-  --fa-github-navigation-bar-hover-color: #00e887;
-
-  --text-font-size-value: 14px;
-  --navigationBar-logo-font-size-value: 18px;
-  --navigationLink-font-size-value: 16px;
-  --button-font-size-value: 14px;
-  --chip-projectCard-font-size-value: 12px;
-  --h1-font-size-value: 30px;
-  --h2-font-size-value: 24px;
-  --h3-font-size-value: 18px;
-  --h4-font-size-value: 16px;
-
-  --logo-width-value: 20px;
-
-  --logo-height-value: 20px;
-
-  --navigationBar-lineHeight: 20px;
-  --button-lineHeight: 20px;
-  --logo-card-lineHeight: 20px;
-  --chip-projectCard-lineHeight: 24px;
-  --h1-lineHeight: 36px;
-  --h2-lineHeight: 32px;
-  --h3-lineHeight: 28px;
-  --h4-lineHeight: 24px;
-  --p--lineHeight: 28px;
-
-  --headline-font-weight: 700;
-  --button-font-weight: 700;
-  --navigationlink-font-weight: 500;
-  --table-of-contents-link-weight: 500;
-  --text-and-icons-weight: 500;
-  --chip-projectCard-font-weight: 500;
-  --normalText-font-weight: 400;
-
-  --navigationBar-padding: 16px;
-  --button-top-bottom-padding: 8px;
-  --button-left-right-padding: 16px;
-  --section-destkop-padding: 80px;
-  --section-mobile-padding: 40px;
-
-  --header-margin-bottom: 80px;
-  --contact-margin-bottom: 80px;
+html {
+  scroll-behavior: smooth;
 }
 
-@media screen and (min-width: 768px) {
-  :root {
-    --text-font-size-value: 16px;
-    --navigationBar-logo-font-size-value: 20px;
-    --button-font-size-value: 18px;
-    --h1-font-size-value: 48px;
-    --h2-font-size-value: 36px;
-    --h3-font-size-value: 24px;
-    --h4-font-size-value: 18px;
-
-    --navigationBar-lineHeight: 24px;
-    --button-lineHeight: 28px;
-    --logo-card-lineHeight: 24px;
-    --h1-lineHeight: 48px;
-    --h2-lineHeight: 40px;
-    --h3-lineHeight: 32px;
-    --h4-lineHeight: 28px;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
-@media screen and (min-width: 1536px) {
-  :root {
-    --text-font-size-value: 18px;
-    --h1-font-size-value: 60px;
-    --h2-font-size-value: 48px;
-
-    --h1-lineHeight: 60px;
-    --h2-lineHeight: 48px;
-  }
-}
-
-/*      --------------------        ELEMENTS        -----------------------------       */
-header {
-  margin-bottom: var(--header-margin-bottom);
+[id] {
+  scroll-margin-top: calc(var(--header-height) + 16px);
 }
 
 body {
-  background-color: var(--body-bg-color);
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--text-size);
+  line-height: 1.7;
   padding-bottom: 40px;
 }
 
@@ -130,73 +82,62 @@ img {
 }
 
 a {
+  color: var(--link);
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 ul {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-mono);
+  color: var(--text);
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
 h1 {
-  font-size: var(--h1-font-size-value);
-  line-height: var(--h1-lineHeight);
-  color: var(--headline-text-color);
-  font-weight: var(--headline-font-weight);
+  font-size: clamp(28px, 5vw, 44px);
 }
 
 h2 {
-  font-size: var(--h2-font-size-value);
-  line-height: var(--h2-lineHeight);
-  color: var(--headline-text-color);
-  font-weight: var(--headline-font-weight);
+  font-size: clamp(22px, 3.5vw, 30px);
 }
 
 h3 {
-  font-size: var(--h3-font-size-value);
-  line-height: var(--h3-lineHeight);
-  color: var(--headline-text-color);
-  font-weight: var(--headline-font-weight);
+  font-size: 20px;
 }
 
 h4 {
-  font-size: var(--h4-font-size-value);
-  line-height: var(--h4-lineHeight);
-  color: var(--headline-text-color);
+  font-size: 17px;
 }
 
 p {
-  line-height: var(--p--lineHeight);
-  font-weight: var(--normalText-font-weight);
-}
-
-/* BUTTON */
-button {
-  padding: var(--button-top-bottom-padding) var(--button-left-right-padding);
-  font-size: var(--button-font-size-value);
-  font-weight: var(--button-font-weight);
-  border-radius: 4px;
-  border: 1px solid var(--button-border-color);
-  color: var(--button-text-color);
-  background-color: var(--button-bg-color);
-  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-button:hover {
-  transform: scale(1.05);
-  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgba(0, 0, 0, 0.2) 0px 1px 4px 0px;
+  color: var(--text);
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border-color);
+  background: var(--border);
   border-radius: 10px;
 }
 
@@ -205,34 +146,69 @@ button:hover {
   max-width: 1088px;
   margin-left: auto;
   margin-right: auto;
-  width: 91.666667%;
+  width: calc(100% - 32px);
 }
 
 .section-properties {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding-top: var(--section-mobile-padding);
+  gap: 16px;
+  padding-top: 48px;
 }
 
 @media screen and (min-width: 768px) {
   .section-properties {
-    padding-top: var(--section-destkop-padding);
+    padding-top: 72px;
   }
 }
 
-.topScreen-line-decoration {
-  width: 100%;
-  height: 8px;
-  position: fixed;
-  top: 0;
-  z-index: 150;
-  background: linear-gradient(
-    to right top,
-    rgb(219, 255, 0),
-    rgb(0, 232, 135),
-    rgb(0, 224, 243)
-  );
+/* Small section label, e.g. "// experience" */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--accent);
+}
+
+/* BUTTONS (use on <a> or <button>) */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  background-color: var(--accent);
+  color: var(--accent-fg);
+  cursor: pointer;
+}
+
+.btn:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--accent);
+}
+
+/* TAGS (tools and skills) */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.4;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background-color: var(--surface-2);
+  color: var(--link);
 }
 
 /* THe goal of this class is to remove some content when reading the portfolio on a small screen so that the small screen is not filled with long paragraphs */
@@ -248,7 +224,7 @@ button:hover {
   flex-wrap: wrap;
   align-items: center;
   row-gap: 6px;
-  column-gap: 12px;
+  column-gap: 16px;
 }
 
 /* COMPONENT: text-and-icon */
@@ -256,115 +232,94 @@ button:hover {
   display: inline-flex;
   align-items: baseline;
   gap: 6px;
-  position: relative;
-}
-
-.text-and-icon::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-image: var(--text-and-icons-hover-color);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.text-and-icon:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
 }
 
 .text-and-icon a {
-  color: var(--text-and-icons-color);
-  font-weight: var(--text-and-icons-weight);
+  color: var(--muted);
+  font-weight: 500;
 }
 
-/* COMPONENT: logo-image (only in component text-and-icon)*/
+.text-and-icon a:hover {
+  color: var(--accent);
+}
+
+.text-and-icon i {
+  color: var(--muted);
+}
+
 .text-and-icon .logo-image {
   width: 16px;
   align-self: center;
 }
 
-/* COMPONENT: logos-list-card */
-.logos-list-card {
+/* ----------------------------     HEADER / NAVIGATION ---------------------------------    */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header-inner {
+  min-height: var(--header-height);
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 8px;
-}
-
-/* COMPONENT: logo-card */
-.logo-card {
-  width: var(--logo-width-value);
-  height: var(--logo-height-value);
-}
-/* ----------------------------     NAVIGATION BAR ---------------------------------    */
-.navigation-bar-parent {
-  background-color: var(--body-bg-color);
-  top: 0;
-  height: 92px;
-  width: 100%;
-  z-index: 90;
-  position: fixed;
-}
-
-.navigation-bar {
-  padding-top: var(--navigationBar-padding);
-  padding-bottom: var(--navigationBar-padding);
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 100;
-  background-color: var(--body-bg-color);
+  column-gap: 24px;
+  row-gap: 4px;
+  padding-block: 8px;
 }
 
-/* MENU BAR */
-.navigation-bar .menu {
+.brand {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+.menu {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 16px;
+  gap: 4px 20px;
+  font-size: 15px;
 }
 
-.navigation-bar .menu a {
-  padding-top: var(--navigationBar-padding);
-  padding-bottom: var(--navigationBar-padding);
+.menu a {
+  color: var(--muted);
+  font-weight: 500;
 }
 
-.navigation-bar .menu a span {
-  font-weight: var(--navigationlink-font-weight);
-  color: var(--navigationlink-text-color);
-  font-size: var(--navigationLink-font-size-value);
+.menu a:hover {
+  color: var(--text);
+  text-decoration: none;
 }
 
-.navigation-bar .menu a span:hover {
-  background-color: var(--navigation-link-background-hover-color);
-}
-
-/* WORK EXPERIENCE DROPDOWN (its links reuse the .menu a styles above) */
-.navigation-bar .menu-dropdown {
+/* EXPERIENCE DROPDOWN */
+.menu-dropdown {
   position: relative;
 }
 
-/* Small caret after "Work experience" */
-.navigation-bar .menu-dropdown-toggle::after {
+.menu-dropdown-toggle::after {
   content: "";
   display: inline-block;
   margin-left: 6px;
   vertical-align: middle;
-  border-top: 5px solid var(--navigationlink-text-color);
+  border-top: 5px solid currentColor;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
 }
 
-/* The box: rounded border + soft shadow */
-.navigation-bar .menu-dropdown-list {
+.menu-dropdown-list {
   display: none;
   flex-direction: column;
   position: absolute;
@@ -373,55 +328,42 @@ button:hover {
   margin-top: 8px;
   min-width: 160px;
   padding: 6px 0;
-  background-color: var(--body-bg-color);
-  border: 1px solid var(--border-color);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Small arrow pointing to "Work experience" */
-.navigation-bar .menu-dropdown-list::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: 20px;
-  width: 10px;
-  height: 10px;
-  background-color: var(--body-bg-color);
-  border-top: 1px solid var(--border-color);
-  border-left: 1px solid var(--border-color);
-  transform: rotate(45deg);
+.menu-dropdown-list a {
+  padding: 6px 20px;
 }
 
-/* Each choice: full-width row, hover highlights the whole row */
-.navigation-bar .menu-dropdown-list a {
-  padding: 8px 24px;
+.menu-dropdown-list a:hover {
+  background-color: var(--surface-2);
 }
 
-.navigation-bar .menu-dropdown-list a:hover {
-  background-color: var(--navigation-link-background-hover-color);
-}
-
-.navigation-bar .menu-dropdown.open .menu-dropdown-list {
+.menu-dropdown.open .menu-dropdown-list {
   display: flex;
 }
 
-/* GITHUB ICON */
-.navigation-bar .fa-github {
-  font-size: var(--navigationBar-logo-font-size-value);
-  border: 1px solid var(--border-color);
+.theme-toggle {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 4px 10px;
   border-radius: 6px;
-  padding: 10px;
+  border: 1px solid var(--border);
+  background-color: transparent;
+  color: var(--muted);
+  cursor: pointer;
 }
 
-.navigation-bar .fa-github:hover {
-  border: 1px solid var(--fa-github-navigation-bar-hover-color);
-  color: var(--fa-github-navigation-bar-hover-color);
+.theme-toggle:hover {
+  color: var(--text);
+  border-color: var(--muted);
 }
 
-/* -----------------      CONTACT -------------------------    */
+/* -----------------      CONTACT / FOOTER -------------------------    */
 .contact {
-  margin-bottom: var(--contact-margin-bottom);
+  margin-bottom: 48px;
 }
 
 /* -----------------   ACCORDION ----------------------  */
@@ -433,9 +375,6 @@ button:hover {
 
 .accordion-title {
   position: relative;
-}
-
-.accordion-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -453,6 +392,7 @@ button:hover {
   gap: 20px;
   transition: gap 0.2s;
 }
+
 .accordion-item.open .accordion-hidden-content {
   overflow: auto;
   max-height: 400px;
@@ -460,22 +400,21 @@ button:hover {
 }
 
 .accordion-title .accordion-title-icon {
+  font-family: var(--font-mono);
   font-size: 20px;
+  color: var(--accent);
   padding-right: 10px;
   padding-left: 30px;
   align-self: flex-start;
 }
 
 /* -------------------    PROJECT DETAILS ------------------    */
-
-.project-details h1 {
-  font-size: 24px;
+.project-details {
+  padding-bottom: 24px;
 }
 
-@media screen and (min-width: 768px) {
-  .project-details h1 {
-    font-size: 36px;
-  }
+.project-details h1 {
+  font-size: clamp(24px, 4vw, 34px);
 }
 
 .project-details h2 {
@@ -484,17 +423,10 @@ button:hover {
 
 .project-details h3 {
   font-size: 20px;
-  color: #111827;
 }
 
 .project-details h4 {
-  font-size: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .project-details h4 {
-    font-size: 18px;
-  }
+  font-size: 17px;
 }
 
 .project-details h5 {
@@ -502,42 +434,35 @@ button:hover {
 }
 
 /* -------  Project-intro ------ */
-
 .project-intro p,
 .project-intro span {
-  font-size: 14px;
-  text-align: justify;
+  font-size: 15px;
 }
 
-/* COMPONENT: Project name */
-
-/* COMPONENT: project-introduction*/
 .project-intro .project-introduction {
   margin-top: 8px;
 }
 
 .project-introduction a {
-  color: #006bff;
-  font-size: 14px;
+  color: var(--link);
+  font-size: 15px;
 }
 
-/* COMPONENT: text-and-icons-list in project-intro*/
 .project-intro .text-and-icons-list {
   margin-top: 8px;
 }
 
 .project-intro .text-and-icons-list .text-and-icon a {
-  font-size: 14px;
+  font-size: 15px;
 }
 
-/* Project-intro <hr> */
 .project-intro hr {
   margin-top: 16px;
-  border-top: 1px var(--border-color);
+  border: 0;
+  border-top: 1px solid var(--border);
 }
 
 /* ------- Project-content ------ */
-/* COMPONENT: project-content */
 .project-content {
   display: flex;
   gap: 32px;
@@ -547,9 +472,9 @@ button:hover {
   font-size: 16px;
 }
 
-/* COMPONENT:  project-content-main */
 .project-content-main {
   width: 100%;
+  min-width: 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -558,13 +483,11 @@ button:hover {
   }
 }
 
-/* COMPONENT: project-content-section */
 .project-content-main .project-content-section {
   /* We added a transparent border in order to prevent margin-collapse */
   border: 1px solid transparent;
 }
 
-/* COMPONENT: project-section-title */
 .project-content-section .project-section-title {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -580,21 +503,16 @@ button:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 4px; /* Adjust the width of the border as needed */
+  width: 4px;
   height: 100%;
-  background: linear-gradient(
-    0deg,
-    rgb(0, 255, 148),
-    rgb(0, 224, 243),
-    rgb(0, 196, 253)
-  );
+  background: var(--accent);
+  border-radius: 2px;
 }
 
 .project-content-section .project-section-title.first-section-title {
   margin-top: 20px;
 }
 
-/* COMPONENT: project-section-details */
 .project-content-section .project-section-details {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -604,16 +522,10 @@ button:hover {
 }
 
 .project-section-details a {
-  color: #006bff;
-  font-size: 16px;
+  color: var(--link);
   font-weight: 400;
 }
 
-.project-section-details p {
-  text-align: justify;
-}
-
-/* COMPONENT: project-video */
 .project-video {
   width: 100%;
   height: 400px;
@@ -630,6 +542,10 @@ button:hover {
 .test-suite {
   display: flex;
   flex-direction: column;
+  padding: 12px 16px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
 .test-suite-table {
@@ -639,12 +555,14 @@ button:hover {
 }
 
 .test-suite-table tr {
-  box-shadow: 0 1px 4px 0 var(--border-color);
+  border-bottom: 1px solid var(--border);
 }
 
 .test-suite-table th,
 .test-suite-table td {
   padding: 10px;
+  text-align: left;
+  vertical-align: top;
 }
 
 .test-case-plan-column {
@@ -666,31 +584,34 @@ button:hover {
   font-weight: 700;
 }
 
-/* COMPONENT: project-test-report */
+/* COMPONENT: project-test-report (always a terminal, in both themes) */
 .project-test-report {
   width: 100%;
   max-height: 400px;
   overflow: auto;
-  background-color: #000000;
+  background-color: var(--terminal-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 12px;
 }
 
 .project-test-report p {
-  font-family: monospace;
-  color: #ffffff;
+  font-family: var(--font-mono);
+  color: var(--terminal-text);
 }
 
 .status-pass {
-  color: green;
+  color: var(--pass);
 }
 
 .status-fail {
-  color: red;
+  color: var(--fail);
 }
 
 /* COMPONENT: project-bug-report */
 .project-bug-report {
   padding-top: 20px;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -716,7 +637,6 @@ button:hover {
 }
 
 /* COMPONENT: project-specifications */
-
 .project-specifications {
   display: flex;
   flex-direction: column;
@@ -741,11 +661,11 @@ button:hover {
     padding-top: 16px;
     padding-bottom: 16px;
     position: sticky;
-    top: 150px;
+    top: calc(var(--header-height) + 32px);
+    align-self: flex-start;
   }
 }
 
-/* COMPONENT: table-of-contents-content */
 .table-of-contents .table-of-contents-content {
   margin-top: 16px;
 }
@@ -756,23 +676,18 @@ button:hover {
   gap: 8px;
 }
 
-/* COMPONENT: table-of-contents-section-title */
 .table-of-contents-section-title {
-  color: var(--table-of-contents-link-color);
-  font-weight: var(--table-of-contents-link-weight);
+  color: var(--muted);
+  font-weight: 500;
   font-size: 14px;
 }
 
-.table-of-contents-section-title:hover {
-  color: var(--table-of-contents-link-hover-color);
-}
-
+.table-of-contents-section-title:hover,
 .table-of-contents-section-title:focus {
-  color: var(--table-of-contents-link-focus-color);
+  color: var(--accent);
 }
 
 /* ------------       PERFORMANCE   ----------------   */
-/* Scenario implementation */
 .scenario-implementation {
   display: flex;
   flex-direction: column;
@@ -782,22 +697,9 @@ button:hover {
   max-width: 1200px;
 }
 
-/* Canvas */
 .chart-container {
   width: 100%;
-  /* Enable horizontal scrollbar when needed */
-  overflow-x: auto;
-  /* Enable vertical scrollbar when needed */
-  overflow-y: auto;
-}
-
-@media screen and (max-width: 800px) {
-  .chart-container {
-    /* Force horizontal scrollbar for smaller screens */
-    overflow-x: scroll;
-    /* Force vertical scrollbar for smaller screens */
-    overflow-y: scroll;
-  }
+  overflow: auto;
 }
 
 canvas {
@@ -805,4 +707,10 @@ canvas {
   margin: auto;
   width: 800px;
   height: 400px;
+}
+
+/* Chart.js draws dark text, so the chart always sits on a light panel in both themes */
+.chart-container {
+  background-color: #ffffff;
+  border-radius: var(--radius);
 }

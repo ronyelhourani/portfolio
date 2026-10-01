@@ -10,43 +10,68 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-P032M511N7"
     ></script>
     <script src="../analytics.js"></script>
-    <script
-      src="https://kit.fontawesome.com/0d4f931e5e.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="../theme-init.js"></script>
     <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="job.css" />
     <script src="../commonScript.js" defer></script>
   </head>
 
   <body>
-    <header>
-      <!-- Top colored line  -->
-      <div class="topScreen-line-decoration"></div>
-      <!-- NAVIGATION BAR -->
-      <div class="navigation-bar-parent">
-        <div class="navigation-bar section-layout">
-          <!-- Menu -->
-          <div class="menu">
-            <a href="../index.html"><span>Home</span></a>
-            <a href="../aboutMe.html"><span>About</span></a>
-            <div class="menu-dropdown">
-              <a href="#" class="menu-dropdown-toggle"><span>Work experience</span></a>
-              <div class="menu-dropdown-list">
-                <a href="ats.html"><span>ATS</span></a>
-                <a href="advenis.html"><span>Advenis</span></a>
-              </div>
+    <header class="site-header">
+      <div class="site-header-inner section-layout">
+        <a class="brand" href="../index.html">rony<span>@</span>qa</a>
+        <nav class="menu">
+          <div class="menu-dropdown">
+            <a href="#" class="menu-dropdown-toggle">Experience</a>
+            <div class="menu-dropdown-list">
+              <a href="../experience/ats.html">ATS</a>
+              <a href="../experience/advenis.html">Advenis</a>
             </div>
           </div>
-
-          <!-- Github repository link -->
-          <a href="https://github.com/ronyelhourani/portfolio" target="_blank" rel="noopener noreferrer"
-            ><i class="fa-brands fa-github fa-2x" title="My Git Repository">
-            </i>
-          </a>
-        </div>
+          <a href="../index.html#skills">Skills</a>
+          <a href="../index.html#projects" hidden>Projects</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+          <a href="https://github.com/ronyelhourani/portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+        <button type="button" class="theme-toggle">light mode</button>
       </div>
     </header>
 
-    <main></main>
+    <main>
+      <article class="job-details section-layout section-properties">
+        <a href="../index.html#experience" class="eyebrow">&larr; back to experience</a>
+        <h1>QA Engineer at Advenis</h1>
+        <p class="job-meta">[Start date] &ndash; [End date or Present] &middot; [City, country or Remote]</p>
+
+        <section class="job-section">
+          <h2>Context</h2>
+          <p>[What the company and the product do, the team you worked in, and who used the product.]</p>
+        </section>
+
+        <section class="job-section">
+          <h2>What I did</h2>
+          <ul class="job-list">
+            <li>[Responsibility or achievement with a number, e.g. cut regression time from X to Y.]</li>
+            <li>[Responsibility or achievement.]</li>
+            <li>[Responsibility or achievement.]</li>
+          </ul>
+        </section>
+
+        <section class="job-section">
+          <h2>Tools and stack</h2>
+          <div class="tags">
+            <span class="tag">[Tool 1]</span>
+            <span class="tag">[Tool 2]</span>
+            <span class="tag">[Tool 3]</span>
+          </div>
+        </section>
+
+        <section class="job-section">
+          <h2>Process and team</h2>
+          <p>[Agile or other process, CI/CD, how QA fit in the release cycle.]</p>
+        </section>
+      </article>
+    </main>
   </body>
 </html>
