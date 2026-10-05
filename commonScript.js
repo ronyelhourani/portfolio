@@ -36,7 +36,36 @@ if (menuDropdown) {
 
 // ----------------------------------------------------------------------------------------------------
 
-// (3) Theme toggle: dark is the default. The choice is saved in localStorage and applied before the page paints by theme-init.js
+// (3) Project tabs (experience pages): a click on a tab shows its panel and hides the others. Arrow keys move between tabs.
+const projectTabList = Array.from(document.querySelectorAll(".project-tab"));
+function selectProjectTab(selectedTab) {
+  for (const tab of projectTabList) {
+    const isSelected = tab === selectedTab;
+    tab.setAttribute("aria-selected", String(isSelected));
+    tab.tabIndex = isSelected ? 0 : -1;
+    document.getElementById(tab.getAttribute("aria-controls")).hidden =
+      !isSelected;
+  }
+}
+projectTabList.forEach(function (tab, index) {
+  tab.addEventListener("click", function () {
+    selectProjectTab(tab);
+  });
+  tab.addEventListener("keydown", function (event) {
+    let nextIndex = index;
+    if (event.key === "ArrowRight") nextIndex = (index + 1) % projectTabList.length;
+    else if (event.key === "ArrowLeft")
+      nextIndex = (index - 1 + projectTabList.length) % projectTabList.length;
+    else return;
+    event.preventDefault();
+    projectTabList[nextIndex].focus();
+    selectProjectTab(projectTabList[nextIndex]);
+  });
+});
+
+// ----------------------------------------------------------------------------------------------------
+
+// (4) Theme toggle: dark is the default. The choice is saved in localStorage and applied before the page paints by theme-init.js
 const themeToggle = document.querySelector(".theme-toggle");
 if (themeToggle) {
   const root = document.documentElement;

@@ -28,3 +28,62 @@
 .job-list li::marker {
   color: var(--accent);
 }
+
+/* Projects: a tab bar (when there are several projects) above a panel with About / My role / Tools */
+.project-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-tab {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.project-tab:hover {
+  color: var(--text);
+}
+
+.project-tab[aria-selected="true"] {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.project-tab:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.project-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.project-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-field h3 {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
