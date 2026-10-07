@@ -361,8 +361,8 @@ p {
   border-color: var(--muted);
 }
 
-/* -----------------      CONTACT / FOOTER -------------------------    */
-.contact {
+/* -----------------      FOOTER SPACING -------------------------    */
+main {
   margin-bottom: 48px;
 }
 

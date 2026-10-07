@@ -3,7 +3,7 @@
   padding-top: 64px;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   gap: 32px;
 }
@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 4px;
   padding: 20px;
   text-align: center;
@@ -36,12 +37,120 @@
   border-radius: var(--radius);
 }
 
+/* On hover or focus the full-body photo spreads from the circle over the whole card.
+   --photo-cy is the circle's centre inside the card, set by the script at the end of index.html */
+.hero-profile {
+  position: relative;
+}
+
+.hero-profile-fill {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+  clip-path: circle(45px at 50% var(--photo-cy, 66px));
+  transition: clip-path 0.5s ease;
+}
+
+.hero-profile-fill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+.hero-profile-fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0) 45%);
+  opacity: 0;
+  transition: opacity 0.4s 0.1s;
+}
+
+.hero-profile-fill-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  z-index: 1;
+  padding-inline: 16px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.4s 0.15s;
+}
+
+.hero-profile-fill-text .hero-profile-line {
+  color: #d0d7de;
+}
+
+.hero-profile > :not(.hero-profile-fill):not(.hero-profile-photo-slot) {
+  transition: opacity 0.25s;
+}
+
+.hero-profile-photo-slot {
+  position: relative;
+  z-index: 2;
+  width: 90px;
+  height: 90px;
+  flex: none;
+}
+
 .hero-profile-photo {
   width: 90px;
   height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
+  overflow: hidden;
   border: 2px solid var(--accent);
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.3s;
+}
+
+.hero-profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.hero-profile-photo:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.hero-profile:has(.hero-profile-photo:hover) .hero-profile-fill,
+.hero-profile:has(.hero-profile-photo:focus) .hero-profile-fill {
+  clip-path: circle(150% at 50% var(--photo-cy, 66px));
+}
+
+.hero-profile:has(.hero-profile-photo:hover) .hero-profile-fill::after,
+.hero-profile:has(.hero-profile-photo:focus) .hero-profile-fill::after,
+.hero-profile:has(.hero-profile-photo:hover) .hero-profile-fill-text,
+.hero-profile:has(.hero-profile-photo:focus) .hero-profile-fill-text {
+  opacity: 1;
+}
+
+.hero-profile:has(.hero-profile-photo:hover) > :not(.hero-profile-fill):not(.hero-profile-photo-slot),
+.hero-profile:has(.hero-profile-photo:focus) > :not(.hero-profile-fill):not(.hero-profile-photo-slot) {
+  opacity: 0;
+}
+
+.hero-profile-photo:hover,
+.hero-profile-photo:focus {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-profile-fill,
+  .hero-profile-fill::after,
+  .hero-profile-fill-text,
+  .hero-profile > * {
+    transition: none;
+  }
 }
 
 .hero-profile-name {
@@ -56,19 +165,49 @@
 }
 
 .hero-profile-links {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 4px 16px;
+  gap: 16px;
   margin-top: 8px;
-  font-size: 14px;
 }
 
-.hero-profile-about {
-  margin-top: 8px;
-  font-family: var(--font-mono);
+.hero-profile-links a {
+  display: flex;
+}
+
+.hero-profile-email-popup {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 10px;
   font-size: 14px;
-  font-weight: 700;
+  white-space: nowrap;
+  user-select: all;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 1;
+}
+
+.hero-profile-email:hover .hero-profile-email-popup,
+.hero-profile-email:focus-within .hero-profile-email-popup,
+.hero-profile-email-popup:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hero-profile-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
 }
 
 .hero .cursor {
@@ -262,47 +401,4 @@
   font-size: 14px;
   font-weight: 700;
   color: var(--accent);
-}
-
-/* COMPONENT: about */
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  align-items: flex-start;
-}
-
-.about-picture {
-  width: 180px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-}
-
-.about-text {
-  flex: 1 1 320px;
-  max-width: 640px;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-/* COMPONENT: contact-list */
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.contact-list li {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 16px;
-}
-
-.contact-label {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  color: var(--muted);
-  min-width: 80px;
 }
