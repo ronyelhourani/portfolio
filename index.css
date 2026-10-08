@@ -10,7 +10,14 @@
 
 @media screen and (min-width: 768px) {
   .hero {
-    padding-top: 96px;
+    padding-top: 130px;
+  }
+}
+
+/* Room for the hint above the card when it wraps under the text */
+@media screen and (max-width: 767px) {
+  .hero-profile {
+    margin-top: 96px;
   }
 }
 
@@ -142,6 +149,113 @@
 .hero-profile-photo:hover,
 .hero-profile-photo:focus {
   opacity: 0;
+}
+
+/* Hint above the photo: visible and bouncing for 3s, hidden for 3s, repeat.
+   While the photo is hovered or focused the animation is removed (hidden); it restarts when the mouse leaves. */
+.hero-profile-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  margin-bottom: 6px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0;
+  animation: hint-cycle 6s infinite;
+}
+
+.hero-profile-hint-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: hint-bounce 1s ease-in-out infinite;
+}
+
+.hero-profile-hint-bubble {
+  width: 88px;
+  height: 88px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.hero-profile-hint-arrow {
+  display: block;
+  margin-top: 2px;
+  color: var(--accent);
+}
+
+.hero-profile-ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  animation: hint-cycle 6s infinite;
+}
+
+.hero-profile-ring::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  animation: hint-pulse 1s ease-out infinite;
+}
+
+.hero-profile:has(.hero-profile-photo:hover) .hero-profile-hint,
+.hero-profile:has(.hero-profile-photo:focus) .hero-profile-hint,
+.hero-profile:has(.hero-profile-photo:hover) .hero-profile-ring,
+.hero-profile:has(.hero-profile-photo:focus) .hero-profile-ring {
+  animation: none;
+  opacity: 0;
+}
+
+.hint-tap {
+  display: none;
+}
+
+@media (hover: none) {
+  .hint-hover {
+    display: none;
+  }
+
+  .hint-tap {
+    display: inline;
+  }
+}
+
+@keyframes hint-cycle {
+  0% { opacity: 0; }
+  4% { opacity: 1; }
+  46% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes hint-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes hint-pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.35); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-profile-hint-body,
+  .hero-profile-ring::before {
+    animation: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
