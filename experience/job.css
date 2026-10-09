@@ -17,6 +17,22 @@
   margin-top: 24px;
 }
 
+.job-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.job-links a {
+  color: var(--link);
+}
+
+.job-links a:hover {
+  text-decoration: underline;
+}
+
 .job-list {
   display: flex;
   flex-direction: column;
