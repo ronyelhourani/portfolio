@@ -45,6 +45,45 @@
   color: var(--accent);
 }
 
+/* "My role": one picture card per responsibility */
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.role-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.role-art {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.role-art svg {
+  width: 100%;
+  height: auto;
+  max-width: 240px;
+}
+
+.role-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.role-card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
 /* Projects: a tab bar (when there are several projects) above a panel with About / My role / Tools */
 .project-tabs {
   display: flex;

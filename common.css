@@ -13,6 +13,7 @@
   --link: #58a6ff;
   --pass: #3fb950;
   --fail: #f85149;
+  --warn: #d29922;
   --terminal-bg: #010409;
   --terminal-text: #e6edf3;
 
@@ -37,6 +38,7 @@
   --link: #0969da;
   --pass: #1a7f37;
   --fail: #cf222e;
+  --warn: #9a6700;
   --terminal-bg: #0d1117;
   --terminal-text: #e6edf3;
   color-scheme: light;
