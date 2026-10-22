@@ -211,6 +211,34 @@
   font-size: 13px;
 }
 
+/* AREIM: who does what, one column per role */
+.duo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+
+.duo-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.duo-col h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.duo-col .tags {
+  margin-top: 6px;
+}
+
 /* Projects: a tab bar (when there are several projects) above a panel with About / My role / Tools */
 .project-tabs {
   display: flex;
