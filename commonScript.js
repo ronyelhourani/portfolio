@@ -87,3 +87,28 @@ if (themeToggle) {
     updateThemeToggleLabel();
   });
 }
+
+// ----------------------------------------------------------------------------------------------------
+
+// (5) Screenshot gallery (experience pages): a click on a screenshot opens it full size in a dialog. Esc or a click outside closes it.
+const shotButtonList = document.querySelectorAll(".shot-open");
+if (shotButtonList.length > 0) {
+  const shotDialog = document.createElement("dialog");
+  shotDialog.className = "shot-dialog";
+  const shotImage = document.createElement("img");
+  shotDialog.appendChild(shotImage);
+  document.body.appendChild(shotDialog);
+
+  shotDialog.addEventListener("click", function () {
+    shotDialog.close();
+  });
+
+  for (const shotButton of shotButtonList) {
+    shotButton.addEventListener("click", function () {
+      const smallImage = shotButton.querySelector("img");
+      shotImage.src = smallImage.src;
+      shotImage.alt = smallImage.alt;
+      shotDialog.showModal();
+    });
+  }
+}
