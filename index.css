@@ -301,6 +301,10 @@
   color: var(--accent);
 }
 
+.job-card-bullets .tags {
+  margin-top: 6px;
+}
+
 .bullet-label {
   font-family: var(--font-mono);
   font-size: 14px;
