@@ -14,6 +14,7 @@
   --pass: #3fb950;
   --fail: #f85149;
   --warn: #d29922;
+  --violet: #a371f7;
   --terminal-bg: #010409;
   --terminal-text: #e6edf3;
 
@@ -39,6 +40,7 @@
   --pass: #1a7f37;
   --fail: #cf222e;
   --warn: #9a6700;
+  --violet: #8250df;
   --terminal-bg: #0d1117;
   --terminal-text: #e6edf3;
   color-scheme: light;

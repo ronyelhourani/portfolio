@@ -45,43 +45,45 @@
   color: var(--accent);
 }
 
-/* "My role": one picture card per responsibility */
-.role-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
-
-.role-card {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-width: 0;
-}
-
-.role-art {
-  display: grid;
-  place-items: center;
-  padding: 10px;
-  background-color: var(--surface);
+/* "My role": one Scrum timeline picture, it scrolls sideways on narrow screens */
+.scrum-scroll {
+  overflow-x: auto;
+  padding: 12px;
+  background-color: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
 
-.role-art svg {
+.scrum-svg {
+  display: block;
   width: 100%;
+  min-width: 680px;
   height: auto;
-  max-width: 240px;
 }
 
-.role-card h3 {
-  font-size: 15px;
-  font-weight: 600;
+.scrum-svg text {
+  font-family: var(--font-body);
 }
 
-.role-card p {
-  font-size: 14px;
-  color: var(--muted);
+.scrum-title {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.scrum-body {
+  font-size: 11.5px;
+  fill: var(--muted);
+}
+
+.scrum-label {
+  font-size: 12px;
+  font-weight: 700;
+  fill: var(--text);
+}
+
+.scrum-sub {
+  font-size: 10.5px;
+  fill: var(--muted);
 }
 
 /* Screenshot gallery: two per row, a click opens the full-size image in a dialog (commonScript.js) */
