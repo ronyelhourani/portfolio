@@ -164,52 +164,194 @@
   height: auto;
 }
 
-/* AWM: the subscription path as numbered step cards */
-.path-note {
-  font-size: 13px;
-  color: var(--muted);
+/* AWM: the workflow, data entry, rules and systems blocks */
+#panel-awm {
+  gap: 32px;
 }
 
-.path-label {
+.big-stat {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+
+.big-number {
   font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.big-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.big-note {
+  font-size: 14px;
   color: var(--muted);
 }
 
-.step-path {
+.workflow {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 10px;
-  counter-reset: step;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  align-items: center;
 }
 
-.step-path li {
+.workflow-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 16px;
   min-width: 0;
+}
+
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 8px;
+  border-left: 2px solid var(--border);
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.step-list li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.step-list li::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--surface);
+  border: 2px solid var(--accent);
+}
+
+.step-list li:first-child::before,
+.step-list li:last-child::before {
+  background-color: var(--accent);
+}
+
+.control-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.control-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.demo-field,
+.demo-check,
+.demo-upload {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   padding: 8px 10px;
+  font-size: 13px;
+  color: var(--muted);
   background-color: var(--bg);
   border: 1px solid var(--border);
   border-radius: 6px;
 }
 
-.step-path strong {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--accent);
+.demo-field {
+  justify-content: space-between;
 }
 
-.step-path strong::before {
-  counter-increment: step;
-  content: counter(step) " · ";
+.demo-upload {
+  justify-content: center;
+  border-style: dashed;
+}
+
+.demo-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+  line-height: 1;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+}
+
+.rule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rule-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 12px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.rule-blocked {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--fail);
+  padding: 2px 8px;
+  border: 1px solid var(--fail);
+  border-radius: 4px;
+}
+
+.system-name {
+  font-family: var(--font-mono);
+  color: var(--link);
+}
+
+.system-name + span {
   color: var(--muted);
 }
 
-.step-path span {
-  font-size: 13px;
+.tag-pass {
+  color: var(--pass);
+  border: 1px solid var(--pass);
+}
+
+.tag-fail {
+  color: var(--fail);
+  border: 1px solid var(--fail);
+}
+
+.shot-pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.shot-open.shot-full img {
+  aspect-ratio: auto;
 }
 
 /* AREIM: who does what, one column per role */
