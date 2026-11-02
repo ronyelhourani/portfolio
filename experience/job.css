@@ -166,7 +166,8 @@
 
 /* AWM: the workflow, data entry, rules and systems blocks */
 #panel-awm,
-#panel-areim {
+#panel-areim,
+#panel-wiseed {
   gap: 32px;
 }
 
