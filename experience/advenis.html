@@ -63,71 +63,12 @@
         <section class="job-section">
           <h2>Products</h2>
           <div class="project-tabs" role="tablist" aria-label="Advenis projects">
-            <button type="button" role="tab" id="tab-areim" class="project-tab" aria-selected="true" aria-controls="panel-areim">AREIM</button>
-            <button type="button" role="tab" id="tab-awm" class="project-tab" aria-selected="false" aria-controls="panel-awm" tabindex="-1">AWM</button>
+            <button type="button" role="tab" id="tab-awm" class="project-tab" aria-selected="true" aria-controls="panel-awm">AWM</button>
+            <button type="button" role="tab" id="tab-areim" class="project-tab" aria-selected="false" aria-controls="panel-areim" tabindex="-1">AREIM</button>
             <button type="button" role="tab" id="tab-wiseed" class="project-tab" aria-selected="false" aria-controls="panel-wiseed" tabindex="-1">WISEED</button>
           </div>
 
-          <div class="project-panel" id="panel-areim" role="tabpanel" aria-labelledby="tab-areim">
-            <div class="project-field">
-              <h3>About the product</h3>
-              <p>Web application for real estate investment subscriptions, used by financial advisors to complete subscriptions on behalf of their clients.</p>
-            </div>
-            <div class="project-field">
-              <h3>How it works</h3>
-              <p>As a QA engineer, I worked on a web application used by financial advisors to subscribe real estate investments on behalf of their clients.</p>
-              <div class="duo">
-                <div class="duo-col">
-                  <h4>The financial advisor</h4>
-                  <ul class="job-list">
-                    <li>Creates the client as an Individual, Legal Entity or Joint Subscription</li>
-                    <li>Completes a long multi-step subscription. The path differs from AWM, but the information is the same:
-                      <div class="tags">
-                        <span class="tag">Personal information</span>
-                        <span class="tag">Investment objectives</span>
-                        <span class="tag">Financial situation</span>
-                        <span class="tag">Suitability assessment</span>
-                        <span class="tag">Bank account details</span>
-                        <span class="tag">Files to provide</span>
-                      </div>
-                    </li>
-                    <li>Signs the documents</li>
-                  </ul>
-                </div>
-                <div class="duo-col">
-                  <h4>The internal team</h4>
-                  <ul class="job-list">
-                    <li>Reviews the information and documents</li>
-                    <li>Approves or rejects the subscription</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="project-field">
-              <h3>When I joined</h3>
-              <p>The application was already developed when I joined, with many bugs and incomplete specifications. I fixed the specs and kept them up to date.</p>
-            </div>
-            <div class="project-field">
-              <h3>QA expertise</h3>
-              <div class="tags">
-                <span class="tag">Integration testing</span>
-                <span class="tag">End-to-end testing</span>
-                <span class="tag">Regression testing</span>
-                <span class="tag">Confirmation testing</span>
-                <span class="tag">Manual test case design</span>
-                <span class="tag">Specification writing &amp; review</span>
-                <span class="tag">Agile Methodology (Scrum)</span>
-              </div>
-            </div>
-            <div class="project-field">
-              <h3>Tools</h3>
-              <div class="tags">
-                <span class="tag">Jira</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-panel" id="panel-awm" role="tabpanel" aria-labelledby="tab-awm" hidden>
+          <div class="project-panel" id="panel-awm" role="tabpanel" aria-labelledby="tab-awm">
             <div class="project-field">
               <h3>About the product</h3>
               <p>Client-facing web application for real estate investment subscriptions.</p>
@@ -140,7 +81,7 @@
                     <span class="big-text">It has</span>
                     <span class="big-number">8</span>
                     <span class="big-text">steps to complete an investment</span>
-                    <span class="big-note">(Each step can have many chapters.)</span>
+                    <span class="big-note">Each step can have many chapters. The content of each step differs depending on the subscription type: individual, legal entity, or joint subscription.</span>
                   </div>
                   <ol class="step-list">
                     <li>Objectifs</li>
@@ -236,6 +177,104 @@
                 <span class="tag">Jira</span>
                 <span class="tag">VS Code</span>
                 <span class="tag">Claude Code</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-panel" id="panel-areim" role="tabpanel" aria-labelledby="tab-areim" hidden>
+            <div class="project-field">
+              <h3>About the product</h3>
+              <p>Web application for real estate investment subscriptions, used by financial advisors to complete subscriptions on behalf of their clients.</p>
+            </div>
+            <div class="project-field">
+              <h3>Multi-step workflow</h3>
+              <div class="big-stat">
+                <span class="big-text">It has</span>
+                <span class="big-number">6</span>
+                <span class="big-text">steps to complete an investment</span>
+                <span class="big-note">Each step can have many chapters. The content of each step differs depending on the subscription type: individual, legal entity, or joint subscription.</span>
+              </div>
+              <ol class="step-list">
+                <li>Connaissance client</li>
+                <li>Profil</li>
+                <li>Souscription de la SCPI</li>
+                <li>Documents règlementaires</li>
+                <li>Documents attendus</li>
+                <li>Réponse</li>
+              </ol>
+              <button type="button" class="shot-open shot-full" aria-label="Enlarge: AREIM subscription steps"><img src="../images/areim/steps.png" alt="AREIM progress bar with the six steps of the subscription" loading="lazy" /></button>
+            </div>
+            <div class="project-field">
+              <h3>Data entry</h3>
+              <div class="big-stat">
+                <span class="big-text">It has</span>
+                <span class="big-number">400+</span>
+                <span class="big-text">places to fill in</span>
+              </div>
+              <div class="control-grid">
+                <div class="control"><span class="demo-field">Jean Dupont</span><span class="control-label">Fields to fill</span></div>
+                <div class="control"><span class="demo-check"><span class="demo-box">✓</span>I confirm</span><span class="control-label">Boxes to check</span></div>
+                <div class="control"><span class="demo-field">Married<span aria-hidden="true">▾</span></span><span class="control-label">Options to select</span></div>
+                <div class="control"><span class="demo-upload">⬆ Drop a file</span><span class="control-label">Files to upload</span></div>
+              </div>
+            </div>
+            <div class="project-field">
+              <h3>Conditions to invest</h3>
+              <p>Some clients are stopped before they can invest. These are only a sample.</p>
+              <ul class="rule-list">
+                <li><span>Age outside the limit</span><span class="rule-blocked">Blocked</span></li>
+                <li><span>Politically exposed person</span><span class="rule-blocked">Blocked</span></li>
+                <li><span>Tax residence in a refused country</span><span class="rule-blocked">Blocked</span></li>
+                <li><span>Financial knowledge too low</span><span class="rule-blocked">Blocked</span></li>
+              </ul>
+            </div>
+            <div class="project-field">
+              <h3>Financial estimates</h3>
+              <p>Investment and financial estimates, with complex calculations to check.</p>
+              <button type="button" class="shot-open shot-full" aria-label="Enlarge: AREIM fee structure"><img src="../images/areim/estimate.png" alt="AREIM fee structure tables with the costs and fees of the investment" loading="lazy" /></button>
+            </div>
+            <div class="project-field">
+              <h3>Connected systems</h3>
+              <p>For example:</p>
+              <ul class="rule-list">
+                <li><span class="system-name">Database</span><span>Stores the client and the subscription</span></li>
+                <li><span class="system-name">Investment validation</span><span>Confirms the investment is allowed</span></li>
+                <li><span class="system-name">Document checks</span><span>Verifies the uploaded files</span></li>
+              </ul>
+            </div>
+            <div class="project-field">
+              <h3>E-signature</h3>
+              <p>Clients sign their documents online.</p>
+            </div>
+            <div class="project-field">
+              <h3>Follow-up and reinvestment</h3>
+              <p>After the signature, the internal team approves or rejects the subscription.</p>
+              <div class="tags">
+                <span class="tag tag-pass">Approved</span>
+                <span class="tag tag-fail">Rejected</span>
+              </div>
+              <p>Once approved, clients follow their investments and projected income on their dashboard. They can invest again at any time.</p>
+            </div>
+            <div class="project-field">
+              <h3>When I joined</h3>
+              <p>The application was already developed when I joined, with many bugs and incomplete specifications. Fixed the specs and kept them up to date.</p>
+            </div>
+            <div class="project-field">
+              <h3>QA expertise</h3>
+              <div class="tags">
+                <span class="tag">Integration testing</span>
+                <span class="tag">End-to-end testing</span>
+                <span class="tag">Regression testing</span>
+                <span class="tag">Confirmation testing</span>
+                <span class="tag">Manual test case design</span>
+                <span class="tag">Specification writing &amp; review</span>
+                <span class="tag">Agile Methodology (Scrum)</span>
+              </div>
+            </div>
+            <div class="project-field">
+              <h3>Tools</h3>
+              <div class="tags">
+                <span class="tag">Jira</span>
               </div>
             </div>
           </div>
