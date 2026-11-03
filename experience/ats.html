@@ -63,7 +63,7 @@
           <div class="project-panel" id="panel-ats">
             <div class="project-field">
               <h3>Middleware XL EDS for Chronopost</h3>
-              <p>Chronopost is a well-known parcel delivery company in France. The middleware sends client orders to Urbantz, which assigns them to drivers.</p>
+              <p>Middleware XL EDS was developed for Chronopost, a well-known parcel delivery company in France. It sends client orders to Urbantz, which assigns them to drivers.</p>
             </div>
             <div class="project-field">
               <h3>How data moves</h3>
@@ -132,7 +132,14 @@
             </div>
             <div class="project-field">
               <h3>Schedule</h3>
-              <p>Delivery schedule per store. Checked for conflicts, like an order after the cut-off time, a weight over the limit, or a delivery on a holiday.</p>
+              <div class="big-stat">
+                <span class="big-number">100s</span>
+                <span class="big-text">of deliveries to schedule each week</span>
+              </div>
+              <div class="check-grid">
+                <div class="check-card"><strong>No conflict</strong><span>Cut-off, weight limit, holidays</span></div>
+                <div class="check-card"><strong>No crash</strong><span>The system holds under a huge number of deliveries</span></div>
+              </div>
               <div class="shot-grid">
                 <figure class="shot">
                   <button type="button" class="shot-open shot-full" aria-label="Enlarge: Week view"><img src="../images/ats/schedule-week.png" alt="Transport plan calendar in week view with slots and cut-off times" loading="lazy" /></button>
@@ -143,22 +150,13 @@
               </div>
             </div>
             <div class="project-field">
-              <h3>Urbantz</h3>
-              <p>Each order is sent from the middleware to Urbantz, then assigned to a driver.</p>
-              <div class="shot-grid">
-                <figure class="shot">
-                  <button type="button" class="shot-open shot-full" aria-label="Enlarge: Delivery details"><img src="../images/ats/urbantz-task.png" alt="Urbantz delivery task with address, contact and items" loading="lazy" /></button>
-                  <figcaption><strong>Delivery details</strong></figcaption>
-                </figure>
-                <figure class="shot">
-                  <button type="button" class="shot-open shot-full" aria-label="Enlarge: Assign to a driver"><img src="../images/ats/urbantz-tour.png" alt="Urbantz tour with its tasks, weight and volume" loading="lazy" /></button>
-                  <figcaption><strong>Assign to a driver</strong></figcaption>
-                </figure>
-              </div>
-            </div>
-            <div class="project-field">
               <h3>Driver's mobile</h3>
-              <p>Drivers follow their tour on a map and update each delivery status. Updates sync to Urbantz and the middleware.</p>
+              <p>Drivers follow their tour on a map and update each delivery status.</p>
+              <div class="check-grid">
+                <div class="check-card"><strong>Map</strong><span>The route and distances are correct</span></div>
+                <div class="check-card"><strong>Status changes</strong><span>Every change made by the driver is saved</span></div>
+                <div class="check-card"><strong>Sync</strong><span>Mobile, Urbantz and middleware show the same info</span></div>
+              </div>
               <div class="phone-strip">
                 <figure class="shot">
                   <button type="button" class="shot-open shot-full" aria-label="Enlarge: Mission"><img src="../images/ats/pda-mission.png" alt="Driver app showing the tour with its route and number of tasks" loading="lazy" /></button>
