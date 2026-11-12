@@ -256,7 +256,8 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 20px;
+  padding: 20px 20px 0;
+  overflow: hidden;
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -305,42 +306,43 @@
   margin-top: 6px;
 }
 
+/* Sub-bullets that hold tags (Requirements, Testing, Automation): label and tags on one row, tags aligned in a column */
+.skill-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+
+.job-card-bullets .skill-row .tags {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .skill-row {
+    grid-template-columns: 120px 1fr;
+    gap: 10px;
+    align-items: baseline;
+  }
+
+  .skill-row-top {
+    grid-template-columns: 140px 1fr;
+  }
+}
+
 .bullet-label {
   font-family: var(--font-mono);
   font-size: 14px;
   color: var(--accent);
 }
 
+/* Full-width footer bar closing the card */
 .job-card-link {
-  font-family: var(--font-mono);
+  display: block;
+  margin: 4px -20px 0;
+  padding: 14px 20px;
+  border-radius: 0;
+  text-align: center;
   font-size: 14px;
-  font-weight: 700;
-}
-
-/* COMPONENT: skills-list */
-.skills-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.skills-group {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 6px;
-}
-
-@media screen and (min-width: 768px) {
-  .skills-group {
-    grid-template-columns: 160px 1fr;
-    align-items: baseline;
-  }
-}
-
-.skills-group dt {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  color: var(--muted);
 }
 
 /* COMPONENT: project-cards-list */
