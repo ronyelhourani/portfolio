@@ -112,3 +112,18 @@ if (shotButtonList.length > 0) {
     });
   }
 }
+
+// ----------------------------------------------------------------------------------------------------
+
+// (6) Sprint diagram boxes (experience pages): hover and focus open a box in CSS. This adds click/tap (phones have no hover) and Enter/Space.
+for (const scrumBox of document.querySelectorAll(".scrum-box")) {
+  scrumBox.addEventListener("click", function () {
+    scrumBox.classList.toggle("open");
+  });
+  scrumBox.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      scrumBox.classList.toggle("open");
+    }
+  });
+}

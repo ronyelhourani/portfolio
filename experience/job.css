@@ -85,6 +85,56 @@
   fill: var(--muted);
 }
 
+/* Each box is a short title bar (with a small chevron). On hover, focus or tap it grows downward and shows its text. */
+.scrum-box {
+  cursor: pointer;
+  outline: none;
+  transition: filter 0.25s ease;
+}
+
+.scrum-box:focus-visible rect {
+  stroke-width: 2.5;
+}
+
+.scrum-rest {
+  transition: opacity 0.15s ease;
+}
+
+.scrum-ex {
+  opacity: 0;
+  clip-path: inset(-2px -2px var(--clip) -2px);
+  transition: clip-path 0.3s ease, opacity 0.15s ease;
+}
+
+.scrum-box:is(:hover, :focus-visible, .open) {
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
+}
+
+.scrum-box:is(:hover, :focus-visible, .open) .scrum-rest {
+  opacity: 0;
+}
+
+.scrum-box:is(:hover, :focus-visible, .open) .scrum-ex {
+  opacity: 1;
+  clip-path: inset(-2px);
+}
+
+.scrum-chev {
+  fill: none;
+  stroke: var(--c);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrum-box,
+  .scrum-rest,
+  .scrum-ex {
+    transition: none;
+  }
+}
+
 /* Screenshot gallery: two per row, a click opens the full-size image in a dialog (commonScript.js) */
 .shot-grid {
   display: grid;
