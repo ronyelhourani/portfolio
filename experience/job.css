@@ -465,6 +465,491 @@
   aspect-ratio: auto;
 }
 
+/* AWM dashboard: a grid of cards. A click on a card opens its dialog (commonScript.js) */
+.dash {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.dash-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  padding: 16px;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+.dash-card:hover,
+.dash-card:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* A card with no dialog behind it: nothing to click, so no hover effect */
+.dash-static,
+.dash-static:hover {
+  border-color: var(--border);
+  transform: none;
+  cursor: default;
+}
+
+.dash-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.dash-lead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.dash-ic {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+}
+
+.dash-arrow {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+}
+
+.dash-card:hover .dash-arrow,
+.dash-card:focus-visible .dash-arrow {
+  color: var(--accent);
+}
+
+.dash-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dash-big {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.dash-sub {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.dash-viz {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.dash-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.dash-dots i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--link);
+}
+
+.dash-chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 2px 8px;
+  color: var(--muted);
+  background-color: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.dash-ring {
+  flex: none;
+  width: 44px;
+  height: 44px;
+}
+
+/* The last two cards are wide: half the grid each, side by side (full width on a phone) */
+.dash-strip {
+  grid-column: span 2;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+}
+
+.dash-strip-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dash-bigrow {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.dash-strip .dash-viz {
+  flex: 1 1 160px;
+  margin-top: 0;
+}
+
+/* Tiny diagram on the Connected systems card: AWM and the systems around it */
+.dash-mini {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dash-mini-hub {
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+}
+
+.dash-mini-ar {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.dash-mini-sp {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dash-mini-sp i {
+  display: block;
+  width: 26px;
+  height: 6px;
+  background-color: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+
+/* The dialog opened by a card */
+.dash-dialog {
+  width: min(92vw, 680px);
+  max-height: 88vh;
+  margin: auto;
+  padding: 0;
+  color: var(--text);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dash-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-dialog::backdrop {
+  background: rgba(1, 4, 9, 0.8);
+}
+
+.dash-head {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.dash-ic-box {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  color: var(--link);
+  background-color: var(--surface-2);
+  border-radius: 8px;
+}
+
+.dash-ic-svg {
+  width: 18px;
+  height: 18px;
+}
+
+.dash-dtitle {
+  font-size: 16px;
+}
+
+.dash-dstat {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.dash-close {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dash-close:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.dash-close svg {
+  width: 14px;
+  height: 14px;
+}
+
+.dash-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  padding: 16px 18px;
+  overflow: auto;
+}
+
+.dash-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dash-section h4 {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Modal 1: horizontal stepper and the connected systems diagram */
+.hstepper {
+  display: flex;
+  padding-bottom: 6px;
+  overflow-x: auto;
+  list-style: none;
+}
+
+.hstepper li {
+  position: relative;
+  display: flex;
+  flex: 1 0 78px;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.hstepper li::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: -50%;
+  right: 50%;
+  height: 2px;
+  background-color: var(--border);
+}
+
+.hstepper li:first-child::before {
+  display: none;
+}
+
+.hstepper i {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-style: normal;
+  color: var(--link);
+  background-color: var(--surface);
+  border: 2px solid var(--link);
+  border-radius: 50%;
+}
+
+.dash-diagram {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.4fr);
+  align-items: center;
+  gap: 14px;
+}
+
+.dash-hub {
+  padding: 18px 10px;
+  font-weight: 700;
+  text-align: center;
+  background-color: var(--surface-2);
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+}
+
+.dash-hub span {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.dash-link {
+  font-size: 20px;
+  color: var(--muted);
+}
+
+.dash-nodes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dash-node {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  font-size: 12px;
+  background-color: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.dash-node strong {
+  font-size: 13px;
+  color: var(--link);
+}
+
+.dash-node span {
+  color: var(--muted);
+}
+
+/* Modal 3: four rule cards in a 2 x 2 grid */
+.rule-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.rule-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 12px;
+  font-size: 14px;
+  background-color: color-mix(in srgb, var(--fail) 6%, var(--surface-2));
+  border: 1px solid color-mix(in srgb, var(--fail) 45%, var(--border));
+  border-radius: 8px;
+}
+
+.rule-card-ic {
+  width: 20px;
+  height: 20px;
+  color: var(--fail);
+}
+
+/* Modal 5: progress ring and a fact tile */
+.dash-ringrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.dash-ring-big {
+  flex: none;
+  width: 96px;
+  height: 96px;
+}
+
+.dash-ring-big text {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 700;
+  fill: var(--text);
+}
+
+.dash-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 16px;
+  background-color: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.dash-fact strong {
+  font-size: 26px;
+  line-height: 1.1;
+}
+
+.dash-fact span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  .dash {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dash-strip {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .dash-diagram,
+  .rule-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dash-link {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dash-card {
+    transition: none;
+  }
+}
+
 /* AREIM: who does what, one column per role */
 .duo {
   display: grid;

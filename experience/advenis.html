@@ -69,108 +69,121 @@
           </div>
 
           <div class="project-panel" id="panel-awm" role="tabpanel" aria-labelledby="tab-awm">
-            <div class="project-field">
-              <h3>About the product</h3>
-              <p>Client-facing web application for real estate investment subscriptions.</p>
+            <p>Client-facing web application for real estate investment subscriptions.</p>
+            <div class="dash">
+            <button type="button" class="dash-card" data-modal="modal-workflow">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Multi-step workflow</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-sub">Multiple steps, each with many chapters</span>
+                <span class="dash-viz"><span class="dash-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+            </button>
+            <div class="dash-card dash-static">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Huge data entry</span></span></span>
+              <span class="dash-sub">400+ fields, boxes and uploads</span>
             </div>
-            <div class="project-field">
-              <h3>Multi-step workflow</h3>
-              <div class="workflow">
-                <div class="workflow-text">
-                  <div class="big-stat">
-                    <span class="big-text">It has</span>
-                    <span class="big-number">8</span>
-                    <span class="big-text">steps to complete an investment</span>
-                    <span class="big-note">Each step can have many chapters. The content of each step differs depending on the subscription type: individual, legal entity, or joint subscription.</span>
-                  </div>
-                  <ol class="step-list">
-                    <li>Objectifs</li>
-                    <li>Informations</li>
-                    <li>Situation</li>
-                    <li>Adéquation</li>
-                    <li>Conseils</li>
-                    <li>Documents</li>
-                    <li>Signature</li>
-                    <li>Paiement</li>
-                  </ol>
-                </div>
-                <button type="button" class="shot-open" aria-label="Enlarge: AWM investment objectives page"><img src="../images/awm/objectives.png" alt="AWM investment objectives page, the first step of the subscription" loading="lazy" /></button>
-              </div>
+            <button type="button" class="dash-card" data-modal="modal-conditions">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Many conditions to invest</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+                <span class="dash-viz"><span class="rule-blocked">Investment blocked</span></span>
+            </button>
+            <div class="dash-card dash-static">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Large number of test cases</span></span></span>
+              <span class="dash-sub">About 700 in total</span>
             </div>
-            <div class="project-field">
-              <h3>Huge data entry</h3>
-              <div class="big-stat">
-                <span class="big-text">It has</span>
-                <span class="big-number">400+</span>
-                <span class="big-text">places to fill in</span>
-              </div>
-              <div class="control-grid">
-                <div class="control"><span class="demo-field">Jean Dupont</span><span class="control-label">Fields to fill</span></div>
-                <div class="control"><span class="demo-check"><span class="demo-box">✓</span>I confirm</span><span class="control-label">Boxes to check</span></div>
-                <div class="control"><span class="demo-field">Married<span aria-hidden="true">▾</span></span><span class="control-label">Options to select</span></div>
-                <div class="control"><span class="demo-upload">⬆ Drop a file</span><span class="control-label">Files to upload</span></div>
-              </div>
+            <div class="dash-card dash-static">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">97% of test cases automated</span></span></span>
+              <span class="dash-sub">Full run takes 2–2.5 hours</span>
             </div>
-            <div class="project-field">
-              <h3>Many conditions to invest</h3>
-              <p>Some clients are stopped before they can invest. These are only a sample.</p>
-              <ul class="rule-list">
-                <li><span>Age outside the limit</span><span class="rule-blocked">Blocked</span></li>
-                <li><span>Politically exposed person</span><span class="rule-blocked">Blocked</span></li>
-                <li><span>Tax residence in a refused country</span><span class="rule-blocked">Blocked</span></li>
-                <li><span>Financial knowledge too low</span><span class="rule-blocked">Blocked</span></li>
-              </ul>
+            <button type="button" class="dash-card" data-modal="modal-estimates">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Financial estimates</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-sub">Complex calculations to check</span>
+            </button>
+            <div class="dash-card dash-static">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">E-signature</span></span></span>
+              <span class="dash-sub">for multi-page documents</span>
             </div>
-            <div class="project-field">
-              <h3>Financial estimates</h3>
-              <p>Investment and financial estimates, with complex calculations to check.</p>
-              <div class="shot-pair">
-                <button type="button" class="shot-open shot-full" aria-label="Enlarge: AWM investment amount and duration"><img src="../images/awm/estimate-inputs.png" alt="AWM estimate page with the investment amount and duration sliders and the share price comparison" loading="lazy" /></button>
-                <button type="button" class="shot-open shot-full" aria-label="Enlarge: AWM results and projection"><img src="../images/awm/estimate-results.png" alt="AWM results with the potential net wealth and the yearly projection chart" loading="lazy" /></button>
-              </div>
+            <button type="button" class="dash-card" data-modal="modal-systems">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Connected systems</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-sub">Many systems AWM relies on</span>
+              <span class="dash-viz"><span class="dash-mini" aria-hidden="true"><span class="dash-mini-hub">AWM</span><span class="dash-mini-ar">⇄</span><span class="dash-mini-sp"><i></i><i></i><i></i></span></span></span>
+            </button>
+            <div class="dash-card dash-strip dash-static">
+              <span class="dash-strip-left">
+                <span class="dash-top"><span class="dash-lead"><span class="dash-title">Many kinds of testing</span></span></span>
+              </span>
+              <span class="dash-viz"><span class="dash-chip">Integration</span><span class="dash-chip">End-to-end</span><span class="dash-chip">Mobile</span><span class="dash-chip">Regression</span><span class="dash-chip">Confirmation</span></span>
             </div>
-            <div class="project-field">
-              <h3>Connected systems</h3>
-              <p>AWM relies on other systems, each one to test. For example:</p>
-              <ul class="rule-list rule-list-systems">
-                <li class="rule-head"><span>System</span><span>What it does</span></li>
-                <li><span class="system-name">Database</span><span>Saves the client and the subscription, so the saved data must match what was entered</span></li>
-                <li><span class="system-name">Investment validation</span><span>Confirms the investment is allowed, and blocks the client if not</span></li>
-                <li><span class="system-name">Document checks</span><span>Checks the uploaded files are valid, and rejects the wrong ones</span></li>
-              </ul>
+            <div class="dash-card dash-strip dash-static">
+              <span class="dash-strip-left">
+                <span class="dash-top"><span class="dash-lead"><span class="dash-title">Many tools used</span></span></span>
+              </span>
+              <span class="dash-viz"><span class="dash-chip">Cypress</span><span class="dash-chip">Git</span><span class="dash-chip">Jira</span><span class="dash-chip">VS Code</span><span class="dash-chip">Claude Code</span></span>
             </div>
-            <div class="project-field">
-              <h3>E-signature for many documents</h3>
-              <p>At the end, the client e-signs a long list of multi-page documents, filled entirely from the steps. Once signed, a confirmation email is sent and the documents reach the other systems.</p>
             </div>
+
             <div class="project-field">
               <h3>When I joined</h3>
               <p>Joined during early development, when no specifications existed. Wrote them from scratch.</p>
             </div>
-            <div class="project-field">
-              <h3>QA expertise</h3>
-              <div class="tags">
-                <span class="tag">Integration testing</span>
-                <span class="tag">End-to-end testing</span>
-                <span class="tag">Mobile testing</span>
-                <span class="tag">Regression testing</span>
-                <span class="tag">Confirmation testing</span>
-                <span class="tag">Test automation</span>
-                <span class="tag">Manual test case design</span>
-                <span class="tag">Specification writing &amp; review</span>
-                <span class="tag">Agile Methodology (Scrum)</span>
+
+            <dialog class="dash-dialog" id="modal-workflow" aria-labelledby="modal-workflow-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-workflow-title">Multi-step workflow</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
               </div>
-            </div>
-            <div class="project-field">
-              <h3>Tools</h3>
-              <div class="tags">
-                <span class="tag">Cypress</span>
-                <span class="tag">Git</span>
-                <span class="tag">Jira</span>
-                <span class="tag">VS Code</span>
-                <span class="tag">Claude Code</span>
+              <div class="dash-body">
+                <ol class="hstepper"><li><i>1</i>Objectifs</li><li><i>2</i>Informations</li><li><i>3</i>Situation</li><li><i>4</i>Adéquation</li><li><i>5</i>Conseils</li><li><i>6</i>Documents</li><li><i>7</i>Signature</li><li><i>8</i>Paiement</li></ol>
+                <p>Each step can have many chapters. The content of each step differs depending on the subscription type: individual, legal entity, or joint subscription.</p>
+                <figure class="shot">
+                  <button type="button" class="shot-open shot-full" aria-label="Enlarge: AWM investment objectives page"><img src="../images/awm/objectives.png" alt="AWM investment objectives page, the first step of the subscription" loading="lazy" /></button>                </figure>
               </div>
-            </div>
+            </dialog>
+
+            <dialog class="dash-dialog" id="modal-conditions" aria-labelledby="modal-conditions-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-conditions-title">Many conditions to invest</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+              </div>
+              <div class="dash-body">
+                <p>Some clients are stopped before they can invest. These are only a sample.</p>
+                <ul class="rule-cards"><li class="rule-card"><svg class="rule-card-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" /></svg><span>Age outside the limit</span><span class="rule-blocked">Blocked</span></li><li class="rule-card"><svg class="rule-card-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" /></svg><span>Politically exposed person</span><span class="rule-blocked">Blocked</span></li><li class="rule-card"><svg class="rule-card-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" /></svg><span>Tax residence in a refused country</span><span class="rule-blocked">Blocked</span></li><li class="rule-card"><svg class="rule-card-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" /></svg><span>Financial knowledge too low</span><span class="rule-blocked">Blocked</span></li></ul>
+              </div>
+            </dialog>
+
+            <dialog class="dash-dialog" id="modal-estimates" aria-labelledby="modal-estimates-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-estimates-title">Financial estimates</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+              </div>
+              <div class="dash-body">
+                <p>Investment and financial estimates, with complex calculations to check.</p>
+                <div class="shot-pair">
+                  <button type="button" class="shot-open shot-full" aria-label="Enlarge: AWM investment amount and duration"><img src="../images/awm/estimate-inputs.png" alt="AWM estimate page with the investment amount and duration sliders and the share price comparison" loading="lazy" /></button>
+                  <button type="button" class="shot-open shot-full" aria-label="Enlarge: AWM results and projection"><img src="../images/awm/estimate-results.png" alt="AWM results with the potential net wealth and the yearly projection chart" loading="lazy" /></button>
+                </div>
+              </div>
+            </dialog>
+
+            <dialog class="dash-dialog" id="modal-systems" aria-labelledby="modal-systems-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-systems-title">Connected systems</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+              </div>
+              <div class="dash-body">
+                <p>AWM relies on other systems, each one to test. For example:</p>
+                <div class="dash-diagram">
+                  <div class="dash-hub">AWM<span>web application</span></div>
+                  <span class="dash-link" aria-hidden="true">⇄</span>
+                  <div class="dash-nodes"><div class="dash-node"><strong>Database</strong><span>Saves the client and the subscription, so the saved data must match what was entered</span></div><div class="dash-node"><strong>Investment validation</strong><span>Confirms the investment is allowed, and blocks the client if not</span></div><div class="dash-node"><strong>Document checks</strong><span>Checks the uploaded files are valid, and rejects the wrong ones</span></div></div>
+                </div>
+              </div>
+            </dialog>
           </div>
 
           <div class="project-panel" id="panel-areim" role="tabpanel" aria-labelledby="tab-areim" hidden>

@@ -127,3 +127,24 @@ for (const scrumBox of document.querySelectorAll(".scrum-box")) {
     }
   });
 }
+
+// ----------------------------------------------------------------------------------------------------
+
+// (7) Dashboard cards (AWM): a click on a card opens its dialog. Esc, the close button or a click outside closes it.
+for (const dashCard of document.querySelectorAll(".dash-card")) {
+  dashCard.addEventListener("click", function () {
+    document.getElementById(dashCard.dataset.modal).showModal();
+  });
+}
+for (const dashDialog of document.querySelectorAll(".dash-dialog")) {
+  dashDialog
+    .querySelector(".dash-close")
+    .addEventListener("click", function () {
+      dashDialog.close();
+    });
+  dashDialog.addEventListener("click", function (event) {
+    if (event.target === dashDialog) {
+      dashDialog.close();
+    }
+  });
+}
