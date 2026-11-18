@@ -465,14 +465,42 @@
   aspect-ratio: auto;
 }
 
-/* AWM dashboard: a grid of cards. A click on a card opens its dialog (commonScript.js) */
-.dash {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+/* AWM dashboard: three titled groups, each a grid of cards. A click on a card opens its dialog (commonScript.js) */
+.dash-group {
+  display: flex;
+  flex-direction: column;
   gap: 12px;
 }
 
+.dash-group + .dash-group {
+  margin-top: 12px;
+}
+
+.dash-group-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.dash-group-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--border);
+}
+
+.dash {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* Rows of 3, 3, 3, 2 cards: each card takes a third of the grid, the two wide cards at the end take half */
 .dash-card {
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -589,9 +617,41 @@
   height: 44px;
 }
 
+/* Big number on the first-row cards: monospace, green, with an optional progress bar */
+.dash-stat {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.dash-stat small {
+  font-size: 0.5em;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.dash-track {
+  height: 8px;
+  margin-top: 6px;
+  overflow: hidden;
+  background-color: var(--surface-2);
+  border-radius: 999px;
+}
+
+.dash-fill {
+  display: block;
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 999px;
+}
+
 /* The last two cards are wide: half the grid each, side by side (full width on a phone) */
 .dash-strip {
-  grid-column: span 2;
+  grid-column: span 3;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
@@ -928,7 +988,12 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .dash-strip {
+  .dash-card {
+    grid-column: span 1;
+  }
+
+  .dash-strip,
+  .dash-full-mobile {
     grid-column: 1 / -1;
   }
 }

@@ -69,7 +69,34 @@
           </div>
 
           <div class="project-panel" id="panel-awm" role="tabpanel" aria-labelledby="tab-awm">
-            <p>Client-facing web application for real estate investment subscriptions.</p>
+            <section class="dash-group">
+              <h3 class="dash-group-title">What is this</h3>
+              <p>Client-facing B2C web application for real estate investment subscriptions.</p>
+            </section>
+
+            <section class="dash-group">
+            <h3 class="dash-group-title">My contribution</h3>
+            <div class="dash">
+            <div class="dash-card dash-static">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Test cases</span></span></span>
+              <span class="dash-stat">700</span>
+              <span class="dash-sub">in total</span>
+            </div>
+            <div class="dash-card dash-static">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Automated</span></span></span>
+              <span class="dash-stat">97<small>%</small></span>
+              <span class="dash-track" aria-hidden="true"><span class="dash-fill" style="width: 97%"></span></span>
+            </div>
+            <div class="dash-card dash-static dash-full-mobile">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Full run</span></span></span>
+              <span class="dash-stat">2<small>h</small></span>
+              <span class="dash-sub">end to end</span>
+            </div>
+            </div>
+            </section>
+
+            <section class="dash-group">
+            <h3 class="dash-group-title">The product challenges</h3>
             <div class="dash">
             <button type="button" class="dash-card" data-modal="modal-workflow">
               <span class="dash-top"><span class="dash-lead"><span class="dash-title">Multi-step workflow</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
@@ -84,17 +111,9 @@
               <span class="dash-top"><span class="dash-lead"><span class="dash-title">Many conditions to invest</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
                 <span class="dash-viz"><span class="rule-blocked">Investment blocked</span></span>
             </button>
-            <div class="dash-card dash-static">
-              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Large number of test cases</span></span></span>
-              <span class="dash-sub">About 700 in total</span>
-            </div>
-            <div class="dash-card dash-static">
-              <span class="dash-top"><span class="dash-lead"><span class="dash-title">97% of test cases automated</span></span></span>
-              <span class="dash-sub">Full run takes 2–2.5 hours</span>
-            </div>
             <button type="button" class="dash-card" data-modal="modal-estimates">
               <span class="dash-top"><span class="dash-lead"><span class="dash-title">Financial estimates</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
-              <span class="dash-sub">Complex calculations to check</span>
+              <span class="dash-sub">Checking complex calculations</span>
             </button>
             <div class="dash-card dash-static">
               <span class="dash-top"><span class="dash-lead"><span class="dash-title">E-signature</span></span></span>
@@ -105,23 +124,26 @@
               <span class="dash-sub">Many systems AWM relies on</span>
               <span class="dash-viz"><span class="dash-mini" aria-hidden="true"><span class="dash-mini-hub">AWM</span><span class="dash-mini-ar">⇄</span><span class="dash-mini-sp"><i></i><i></i><i></i></span></span></span>
             </button>
+            </div>
+            </section>
+
+            <section class="dash-group">
+            <h3 class="dash-group-title">Techniques and tools</h3>
+            <div class="dash">
             <div class="dash-card dash-strip dash-static">
               <span class="dash-strip-left">
-                <span class="dash-top"><span class="dash-lead"><span class="dash-title">Many kinds of testing</span></span></span>
+                <span class="dash-top"><span class="dash-lead"><span class="dash-title">Types of testing</span></span></span>
               </span>
               <span class="dash-viz"><span class="dash-chip">Integration</span><span class="dash-chip">End-to-end</span><span class="dash-chip">Mobile</span><span class="dash-chip">Regression</span><span class="dash-chip">Confirmation</span></span>
             </div>
             <div class="dash-card dash-strip dash-static">
               <span class="dash-strip-left">
-                <span class="dash-top"><span class="dash-lead"><span class="dash-title">Many tools used</span></span></span>
+                <span class="dash-top"><span class="dash-lead"><span class="dash-title">Testing tools</span></span></span>
               </span>
               <span class="dash-viz"><span class="dash-chip">Cypress</span><span class="dash-chip">Git</span><span class="dash-chip">Jira</span><span class="dash-chip">VS Code</span><span class="dash-chip">Claude Code</span></span>
             </div>
             </div>
-
-            <div class="project-field">
-              <p>Joined during early development, when no specifications existed. Wrote them from scratch.</p>
-            </div>
+            </section>
 
             <dialog class="dash-dialog" id="modal-workflow" aria-labelledby="modal-workflow-title">
               <div class="dash-head">
@@ -159,7 +181,7 @@
                 <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
               </div>
               <div class="dash-body">
-                <p>Investment and financial estimates, with complex calculations to check.</p>
+                <p>Investment and financial estimates, checking complex calculations.</p>
                 <div class="shot-pair">
                   <button type="button" class="shot-open shot-full" aria-label="Enlarge: AWM investment amount and duration"><img src="../images/awm/estimate-inputs.png" alt="AWM estimate page with the investment amount and duration sliders and the share price comparison" loading="lazy" /></button>
                   <button type="button" class="shot-open shot-full" aria-label="Enlarge: AWM results and projection"><img src="../images/awm/estimate-results.png" alt="AWM results with the potential net wealth and the yearly projection chart" loading="lazy" /></button>
