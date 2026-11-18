@@ -634,6 +634,18 @@
   letter-spacing: 0;
 }
 
+/* A card that takes half the row, for the last two stat cards of a row of five */
+.dash-half {
+  grid-column: span 3;
+}
+
+/* Tiny text chain on a card, like the data flow on ATS */
+.dash-flow-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
 .dash-track {
   height: 8px;
   margin-top: 6px;
@@ -721,6 +733,11 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
+}
+
+/* A wider dialog for content that needs room, like the ATS data flow and screenshots */
+.dash-dialog-wide {
+  width: min(94vw, 1040px);
 }
 
 .dash-dialog[open] {

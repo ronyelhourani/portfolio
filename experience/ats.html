@@ -61,13 +61,100 @@
         <section class="job-section">
           <h2>Product</h2>
           <div class="project-panel" id="panel-ats">
-            <div class="project-field">
-              <h3>Middleware XL EDS for Chronopost</h3>
+            <section class="dash-group">
+              <h3 class="dash-group-title">What is this</h3>
               <p>Middleware XL EDS was developed for Chronopost, a well-known parcel delivery company in France. It sends client orders to Urbantz, which assigns them to drivers.</p>
+            </section>
+
+            <section class="dash-group">
+              <h3 class="dash-group-title">My contribution</h3>
+              <div class="dash">
+            <div class="dash-card dash-static">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">E2E UI test cases</span></span></span>
+              <span class="dash-stat">1000<small>+</small></span>
+              <span class="dash-sub">in total</span>
             </div>
-            <div class="project-field">
-              <h3>How data moves</h3>
-              <div class="sys-flow">
+            <div class="dash-card dash-static">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">E2E API test cases</span></span></span>
+              <span class="dash-stat">500<small>+</small></span>
+              <span class="dash-sub">in total</span>
+            </div>
+            <div class="dash-card dash-static dash-full-mobile">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Automated</span></span></span>
+              <span class="dash-stat">80<small>%</small></span>
+              <span class="dash-track" aria-hidden="true"><span class="dash-fill" style="width: 80%"></span></span>
+            </div>
+            <div class="dash-card dash-static dash-half">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">E2E UI run time</span></span></span>
+              <span class="dash-stat">1<small>h</small></span>
+            </div>
+            <div class="dash-card dash-static dash-half">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">E2E API run time</span></span></span>
+              <span class="dash-stat">10<small>min</small></span>
+            </div>
+              </div>
+            </section>
+
+            <section class="dash-group">
+              <h3 class="dash-group-title">The product challenges</h3>
+              <div class="dash">
+            <button type="button" class="dash-card" data-modal="modal-flow">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">How data moves</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-sub">From the client to the driver and back</span>
+              <span class="dash-viz"><span class="dash-flow-text" aria-hidden="true">Client ⇄ Middleware ⇄ Urbantz ⇄ Mobile</span></span>
+            </button>
+            <button type="button" class="dash-card" data-modal="modal-place">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Placing an order</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-sub">Two ways to create an order</span>
+              <span class="dash-viz"><span class="dash-chip">Portal</span><span class="dash-chip">API</span></span>
+            </button>
+            <button type="button" class="dash-card" data-modal="modal-order">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Order</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-sub">Many details, all to check</span>
+            </button>
+            <button type="button" class="dash-card" data-modal="modal-grid">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Pricing grid</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-sub">A complex grid for each client</span>
+            </button>
+            <button type="button" class="dash-card" data-modal="modal-schedule">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Schedule</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-sub">Hundreds of deliveries each week</span>
+            </button>
+            <button type="button" class="dash-card" data-modal="modal-driver">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Driver's mobile</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-sub">Map and status updates</span>
+            </button>
+              </div>
+            </section>
+
+            <section class="dash-group">
+              <h3 class="dash-group-title">Techniques and tools</h3>
+              <div class="dash">
+            <div class="dash-card dash-strip dash-static">
+              <span class="dash-strip-left">
+                <span class="dash-top"><span class="dash-lead"><span class="dash-title">Types of testing</span></span></span>
+              </span>
+              <span class="dash-viz"><span class="dash-chip">Integration</span><span class="dash-chip">End-to-end</span><span class="dash-chip">API</span><span class="dash-chip">Mobile</span><span class="dash-chip">Regression</span><span class="dash-chip">Confirmation</span></span>
+            </div>
+            <div class="dash-card dash-strip dash-static">
+              <span class="dash-strip-left">
+                <span class="dash-top"><span class="dash-lead"><span class="dash-title">Testing tools</span></span></span>
+              </span>
+              <span class="dash-viz"><span class="dash-chip">Cypress</span><span class="dash-chip">Postman</span><span class="dash-chip">Git</span><span class="dash-chip">Jira</span><span class="dash-chip">VS Code</span></span>
+            </div>
+              </div>
+            </section>
+
+            <dialog class="dash-dialog dash-dialog-wide" id="modal-flow" aria-labelledby="modal-flow-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-flow-title">How data moves</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+              </div>
+              <div class="dash-body">
+                <p>An order travels from the client to the driver, and its status travels back.</p>
+<div class="sys-flow">
                 <div class="sys-node"><strong>Client</strong><span>Portal or API</span></div>
                 <div class="sys-link"><span class="out">→ order</span><span class="back">← status</span></div>
                 <div class="sys-node sys-main"><strong>Middleware</strong><span>XL EDS</span></div>
@@ -76,9 +163,18 @@
                 <div class="sys-link"><span class="out">→ assigned deliveries</span><span class="back">← status</span></div>
                 <div class="sys-node"><strong>Driver's mobile</strong><span>Map and status</span></div>
               </div>
-            </div>
-            <div class="project-field">
-              <h3>Placing an order</h3>
+              </div>
+            </dialog>
+
+            <dialog class="dash-dialog dash-dialog-wide" id="modal-place" aria-labelledby="modal-place-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-place-title">Placing an order</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+              </div>
+              <div class="dash-body">
+                <p>An order can be created in two ways.</p>
               <div class="shot-grid">
                 <figure class="shot">
                   <button type="button" class="shot-open shot-full" aria-label="Enlarge: Order portal"><img src="../images/ats/order-portal.png" alt="Order portal form to request a delivery" loading="lazy" /></button>
@@ -89,9 +185,17 @@
                   <figcaption><strong>API, tested with Postman</strong>For large clients with thousands of orders a week.</figcaption>
                 </figure>
               </div>
-            </div>
-            <div class="project-field">
-              <h3>Order</h3>
+              </div>
+            </dialog>
+
+            <dialog class="dash-dialog dash-dialog-wide" id="modal-order" aria-labelledby="modal-order-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-order-title">Order</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+              </div>
+              <div class="dash-body">
               <p>Each order holds many details. All had to be correct, whether created in the portal or in Postman.</p>
               <div class="shot-grid">
                 <figure class="shot">
@@ -111,9 +215,17 @@
                   <figcaption><strong>Price breakdown</strong></figcaption>
                 </figure>
               </div>
-            </div>
-            <div class="project-field">
-              <h3>Pricing grid</h3>
+              </div>
+            </dialog>
+
+            <dialog class="dash-dialog dash-dialog-wide" id="modal-grid" aria-labelledby="modal-grid-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-grid-title">Pricing grid</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+              </div>
+              <div class="dash-body">
               <p>Each client has its own complex pricing grid. Verified that every order price matched it.</p>
               <div class="shot-grid">
                 <figure class="shot">
@@ -129,9 +241,17 @@
                   <button type="button" class="shot-open shot-full" aria-label="Enlarge: Slots and fees"><img src="../images/ats/grid-slots.png" alt="Pricing grid with delivery slots, failure fees, skills and bonus" loading="lazy" /></button>
                 </figure>
               </div>
-            </div>
-            <div class="project-field">
-              <h3>Schedule</h3>
+              </div>
+            </dialog>
+
+            <dialog class="dash-dialog dash-dialog-wide" id="modal-schedule" aria-labelledby="modal-schedule-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-schedule-title">Schedule</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+              </div>
+              <div class="dash-body">
               <div class="big-stat">
                 <span class="big-number">100s</span>
                 <span class="big-text">of deliveries to schedule each week</span>
@@ -148,9 +268,17 @@
                   <button type="button" class="shot-open shot-full" aria-label="Enlarge: Planning list"><img src="../images/ats/schedule-list.png" alt="Transport plan in list view" loading="lazy" /></button>
                 </figure>
               </div>
-            </div>
-            <div class="project-field">
-              <h3>Driver's mobile</h3>
+              </div>
+            </dialog>
+
+            <dialog class="dash-dialog dash-dialog-wide" id="modal-driver" aria-labelledby="modal-driver-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-driver-title">Driver's mobile</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+              </div>
+              <div class="dash-body">
               <p>Drivers follow their tour on a map and update each delivery status.</p>
               <div class="check-grid">
                 <div class="check-card"><strong>Map</strong><span>The route and distances are correct</span></div>
@@ -191,36 +319,8 @@
                   <figcaption><strong>End tour</strong></figcaption>
                 </figure>
               </div>
-            </div>
-            <div class="project-field">
-              <h3>When I joined</h3>
-              <p>Joined at the beginning of the project.</p>
-            </div>
-            <div class="project-field">
-              <h3>QA expertise</h3>
-              <div class="tags">
-                <span class="tag">Integration testing</span>
-                <span class="tag">End-to-end testing</span>
-                <span class="tag">API testing</span>
-                <span class="tag">Mobile testing</span>
-                <span class="tag">Regression testing</span>
-                <span class="tag">Confirmation testing</span>
-                <span class="tag">Test automation</span>
-                <span class="tag">Manual test case design</span>
-                <span class="tag">Requirements analysis</span>
-                <span class="tag">Agile Methodology (Scrum)</span>
               </div>
-            </div>
-            <div class="project-field">
-              <h3>Tools</h3>
-              <div class="tags">
-                <span class="tag">Cypress</span>
-                <span class="tag">Postman</span>
-                <span class="tag">Git</span>
-                <span class="tag">Jira</span>
-                <span class="tag">VS Code</span>
-              </div>
-            </div>
+            </dialog>
           </div>
         </section>
       </article>
