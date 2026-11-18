@@ -208,93 +208,130 @@
           </div>
 
           <div class="project-panel" id="panel-areim" role="tabpanel" aria-labelledby="tab-areim" hidden>
-            <div class="project-field">
-              <h3>About the product</h3>
-              <p>Web application for real estate investment subscriptions, used by financial advisors to complete subscriptions on behalf of their clients.</p>
-            </div>
-            <div class="project-field">
-              <h3>Multi-step workflow</h3>
-              <div class="big-stat">
-                <span class="big-text">It has</span>
-                <span class="big-number">6</span>
-                <span class="big-text">steps to complete an investment</span>
-                <span class="big-note">Each step can have many chapters. The content of each step differs depending on the subscription type: individual, legal entity, or joint subscription.</span>
+            <section class="dash-group">
+              <h3 class="dash-group-title">What is this</h3>
+              <p>B2B web application for real estate investment subscriptions, used by financial advisors to complete subscriptions on behalf of their clients.</p>
+            </section>
+
+            <section class="dash-group">
+              <h3 class="dash-group-title">My contribution</h3>
+              <div class="dash">
+              <div class="dash-card dash-static">
+                <span class="dash-top"><span class="dash-lead"><span class="dash-title">Test cases</span></span></span>
+                <span class="dash-stat">400</span>
+                <span class="dash-sub">in total</span>
               </div>
-              <ol class="step-list">
-                <li>Connaissance client</li>
-                <li>Profil</li>
-                <li>Souscription de la SCPI</li>
-                <li>Documents règlementaires</li>
-                <li>Documents attendus</li>
-                <li>Réponse</li>
-              </ol>
-              <button type="button" class="shot-open shot-full" aria-label="Enlarge: AREIM subscription steps"><img src="../images/areim/steps.png" alt="AREIM progress bar with the six steps of the subscription" loading="lazy" /></button>
-            </div>
-            <div class="project-field">
-              <h3>Huge data entry</h3>
-              <div class="big-stat">
-                <span class="big-text">It has</span>
-                <span class="big-number">400+</span>
-                <span class="big-text">places to fill in</span>
               </div>
-              <div class="control-grid">
-                <div class="control"><span class="demo-field">Jean Dupont</span><span class="control-label">Fields to fill</span></div>
-                <div class="control"><span class="demo-check"><span class="demo-box">✓</span>I confirm</span><span class="control-label">Boxes to check</span></div>
-                <div class="control"><span class="demo-field">Married<span aria-hidden="true">▾</span></span><span class="control-label">Options to select</span></div>
-                <div class="control"><span class="demo-upload">⬆ Drop a file</span><span class="control-label">Files to upload</span></div>
+            </section>
+
+            <section class="dash-group">
+              <h3 class="dash-group-title">The product challenges</h3>
+              <div class="dash">
+            <button type="button" class="dash-card" data-modal="modal-areim-workflow">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Multi-step workflow</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-sub">Multiple steps, each with many chapters</span>
+              <span class="dash-viz"><span class="dash-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+            </button>
+            <div class="dash-card dash-static">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Huge data entry</span></span></span>
+              <span class="dash-sub">400+ fields, boxes and uploads</span>
+            </div>
+            <button type="button" class="dash-card" data-modal="modal-areim-conditions">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Many conditions to invest</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-viz"><span class="rule-blocked">Investment blocked</span></span>
+            </button>
+            <button type="button" class="dash-card" data-modal="modal-areim-estimates">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Financial estimates</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-sub">Checking complex calculations</span>
+            </button>
+            <div class="dash-card dash-static">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">E-signature</span></span></span>
+              <span class="dash-sub">for multi-page documents</span>
+            </div>
+            <button type="button" class="dash-card" data-modal="modal-areim-systems">
+              <span class="dash-top"><span class="dash-lead"><span class="dash-title">Connected systems</span></span><svg class="dash-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+              <span class="dash-sub">Many systems AREIM relies on</span>
+              <span class="dash-viz"><span class="dash-mini" aria-hidden="true"><span class="dash-mini-hub">AREIM</span><span class="dash-mini-ar">⇄</span><span class="dash-mini-sp"><i></i><i></i><i></i></span></span></span>
+            </button>
               </div>
-            </div>
-            <div class="project-field">
-              <h3>Many conditions to invest</h3>
-              <p>Some clients are stopped before they can invest. These are only a sample.</p>
-              <ul class="rule-list">
-                <li><span>Age outside the limit</span><span class="rule-blocked">Blocked</span></li>
-                <li><span>Politically exposed person</span><span class="rule-blocked">Blocked</span></li>
-                <li><span>Tax residence in a refused country</span><span class="rule-blocked">Blocked</span></li>
-                <li><span>Financial knowledge too low</span><span class="rule-blocked">Blocked</span></li>
-              </ul>
-            </div>
-            <div class="project-field">
-              <h3>Financial estimates</h3>
-              <p>Investment and financial estimates, with complex calculations to check.</p>
-              <button type="button" class="shot-open shot-full" aria-label="Enlarge: AREIM fee structure"><img src="../images/areim/estimate.png" alt="AREIM fee structure tables with the costs and fees of the investment" loading="lazy" /></button>
-            </div>
-            <div class="project-field">
-              <h3>Connected systems</h3>
-              <p>AREIM relies on other systems, each one to test. For example:</p>
-              <ul class="rule-list rule-list-systems">
-                <li class="rule-head"><span>System</span><span>What it does</span></li>
-                <li><span class="system-name">Database</span><span>Saves the client and the subscription, so the saved data must match what was entered</span></li>
-                <li><span class="system-name">Investment validation</span><span>Confirms the investment is allowed, and blocks the client if not</span></li>
-                <li><span class="system-name">Document checks</span><span>Checks the uploaded files are valid, and rejects the wrong ones</span></li>
-              </ul>
-            </div>
-            <div class="project-field">
-              <h3>E-signature for many documents</h3>
-              <p>At the end, the client e-signs a long list of multi-page documents, filled entirely from the steps. Once signed, a confirmation email is sent and the documents reach the other systems.</p>
-            </div>
-            <div class="project-field">
-              <h3>When I joined</h3>
-              <p>The application was already developed when I joined, with many bugs and incomplete specifications. Fixed the specs and kept them up to date.</p>
-            </div>
-            <div class="project-field">
-              <h3>QA expertise</h3>
-              <div class="tags">
-                <span class="tag">Integration testing</span>
-                <span class="tag">End-to-end testing</span>
-                <span class="tag">Regression testing</span>
-                <span class="tag">Confirmation testing</span>
-                <span class="tag">Manual test case design</span>
-                <span class="tag">Specification writing &amp; review</span>
-                <span class="tag">Agile Methodology (Scrum)</span>
+            </section>
+
+            <dialog class="dash-dialog" id="modal-areim-workflow" aria-labelledby="modal-areim-workflow-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-areim-workflow-title">Multi-step workflow</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
               </div>
-            </div>
-            <div class="project-field">
-              <h3>Tools</h3>
-              <div class="tags">
-                <span class="tag">Jira</span>
+              <div class="dash-body">
+                <ol class="hstepper"><li><i>1</i>Connaissance client</li><li><i>2</i>Profil</li><li><i>3</i>Souscription de la SCPI</li><li><i>4</i>Documents règlementaires</li><li><i>5</i>Documents attendus</li><li><i>6</i>Réponse</li></ol>
+                <p>Each step can have many chapters. The content of each step differs depending on the subscription type: individual, legal entity, or joint subscription.</p>
+                <figure class="shot">
+                  <button type="button" class="shot-open shot-full" aria-label="Enlarge: AREIM subscription steps"><img src="../images/areim/steps.png" alt="AREIM progress bar with the six steps of the subscription" loading="lazy" /></button>
+                </figure>
               </div>
-            </div>
+            </dialog>
+
+            <dialog class="dash-dialog" id="modal-areim-conditions" aria-labelledby="modal-areim-conditions-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-areim-conditions-title">Many conditions to invest</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+              </div>
+              <div class="dash-body">
+                <p>Some clients are stopped before they can invest. These are only a sample.</p>
+                <ul class="rule-cards"><li class="rule-card"><svg class="rule-card-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" /></svg><span>Age outside the limit</span><span class="rule-blocked">Blocked</span></li><li class="rule-card"><svg class="rule-card-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" /></svg><span>Politically exposed person</span><span class="rule-blocked">Blocked</span></li><li class="rule-card"><svg class="rule-card-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" /></svg><span>Tax residence in a refused country</span><span class="rule-blocked">Blocked</span></li><li class="rule-card"><svg class="rule-card-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" /></svg><span>Financial knowledge too low</span><span class="rule-blocked">Blocked</span></li></ul>
+              </div>
+            </dialog>
+
+            <dialog class="dash-dialog" id="modal-areim-estimates" aria-labelledby="modal-areim-estimates-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-areim-estimates-title">Financial estimates</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+              </div>
+              <div class="dash-body">
+                <p>Investment and financial estimates, checking complex calculations.</p>
+                <button type="button" class="shot-open shot-full" aria-label="Enlarge: AREIM fee structure"><img src="../images/areim/estimate.png" alt="AREIM fee structure tables with the costs and fees of the investment" loading="lazy" /></button>
+              </div>
+            </dialog>
+
+            <dialog class="dash-dialog" id="modal-areim-systems" aria-labelledby="modal-areim-systems-title">
+              <div class="dash-head">
+                <div>
+                  <h3 class="dash-dtitle" id="modal-areim-systems-title">Connected systems</h3>
+                </div>
+                <button type="button" class="dash-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg></button>
+              </div>
+              <div class="dash-body">
+                <p>AREIM relies on other systems, each one to test. For example:</p>
+                <div class="dash-diagram">
+                  <div class="dash-hub">AREIM<span>web application</span></div>
+                  <span class="dash-link" aria-hidden="true">⇄</span>
+                  <div class="dash-nodes"><div class="dash-node"><strong>Database</strong><span>Saves the client and the subscription, so the saved data must match what was entered</span></div><div class="dash-node"><strong>Investment validation</strong><span>Confirms the investment is allowed, and blocks the client if not</span></div><div class="dash-node"><strong>Document checks</strong><span>Checks the uploaded files are valid, and rejects the wrong ones</span></div></div>
+                </div>
+              </div>
+            </dialog>
+
+            <section class="dash-group">
+              <h3 class="dash-group-title">Techniques and tools</h3>
+              <div class="dash">
+              <div class="dash-card dash-strip dash-static">
+                <span class="dash-strip-left">
+                  <span class="dash-top"><span class="dash-lead"><span class="dash-title">Types of testing</span></span></span>
+                </span>
+                <span class="dash-viz"><span class="dash-chip">Integration</span><span class="dash-chip">End-to-end</span><span class="dash-chip">Regression</span><span class="dash-chip">Confirmation</span></span>
+              </div>
+              <div class="dash-card dash-strip dash-static">
+                <span class="dash-strip-left">
+                  <span class="dash-top"><span class="dash-lead"><span class="dash-title">Testing tools</span></span></span>
+                </span>
+                <span class="dash-viz"><span class="dash-chip">Jira</span></span>
+              </div>
+              </div>
+            </section>
           </div>
 
           <div class="project-panel" id="panel-wiseed" role="tabpanel" aria-labelledby="tab-wiseed" hidden>
