@@ -198,6 +198,41 @@ p {
   color: var(--accent);
 }
 
+.btn svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+.btn:has(svg) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-lg {
+  padding: 13px 26px;
+  font-size: 16px;
+}
+
+.btn-sm {
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  opacity: 1;
+}
+
 /* TAGS (tools and skills) */
 .tags {
   display: flex;
